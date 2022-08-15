@@ -8,9 +8,14 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Ommeg from './pages/Ommeg'
 import Portfolio from './pages/Portfolio'
+import { getEvents } from './lib/services/eventService'
 
 export default function App() {
   // Write JavaScript, use Hooks, add state and more
+  const getEventData = async () => {
+    const events = await getEvents()
+    console.log(events)
+  }
 
   return (
     <>
@@ -25,6 +30,9 @@ export default function App() {
         </Route>
       </Routes>
       <Aside />
+      <button type="button" onClick={getEventData}>
+        Hent data
+      </button>
       <Footer />
     </>
   )
