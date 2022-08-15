@@ -348,6 +348,12 @@ span.under2 {
   width: 5px;
   border-radius: 5px;
   margin-bottom: 3px;
+  margin-right: 5px;
+}
+.lineUp {
+  display: flex;
+  align-items: center;
+
 }
 .portfolios article ul li {
   display: inline;
@@ -477,7 +483,7 @@ span.under4 {
 /* HER KOMMER CSS FOR CASE STUDY SIDEN */
 .bildecs {
   width: 100%;
-  background-image: url('img/code.jpeg'); /* The image used */
+  
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 900px; /* You must set a specified height */
   background-position: center; /* Center the image */

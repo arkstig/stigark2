@@ -23,7 +23,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio">
             <Route index element={<Portfolio />} />
-            <Route path=":kursSlug" element={<CurrentPortfolio />} />
+            <Route path=":slug" element={<CurrentPortfolio />} />
           </Route>
           <Route path="/ommeg" element={<Ommeg />} />
         </Route>

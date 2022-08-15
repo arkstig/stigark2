@@ -25,13 +25,14 @@ export default function Portfolio() {
       {portfolios &&
         portfolios?.map((portfolio) => (
           <Card
-            key={portfolio._id}
+            key={portfolio.id}
             title={portfolio.title}
             ingress={portfolio.ingress}
             live={portfolio.live}
             reddit={portfolio.reddit}
-            slug={portfolio.slug}
+            slug={portfolio.portfoliosSlug}
             kategorier={portfolio.kategoriSet}
+            imageUrl={portfolio.imageUrl}
           />
         ))}
     </div>

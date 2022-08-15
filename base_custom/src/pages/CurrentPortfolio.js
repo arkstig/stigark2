@@ -1,36 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
-import { useParams, NavLink, Outlet } from 'react-router-dom'
+import { useParams, NavLink, Outlet, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { getPortfolios } from '../lib/services/eventService'
+import { getPortfolio } from '../lib/services/eventService'
 
 export default function CurrentPortfolio() {
-  const [portfolios, setPortfolios] = useState('')
-  const { portfoliosSlug } = useParams()
+  const [portfolio, setPortfolio] = useState(null)
+  const { slug } = useParams()
 
   useEffect(() => {
     try {
-      const getPortfoliosData = async () => {
-        const data = await getPortfolios()
-        setPortfolios(data)
+      const getPortfolioData = async () => {
+        const data = await getPortfolio(slug)
+        setPortfolio(data)
       }
-      getPortfoliosData()
+      getPortfolioData()
     } catch (error) {
       // Sender feilmelding tilbake om noe går galt
       throw new Error(error)
     }
-  }, [])
-
-  const currentPortfolio =
-    portfolios &&
-    portfolios?.filter((portfolio) => portfoliosSlug.includes(portfolio.slug))
+  }, [slug])
 
   return (
-    <div id="casestudy">
+    <div className="casestudy">
       <article>
         <div className="informasjon4">
           <div className="tilbake">
-            <a href="portfolio.html">
+            <NavLink to="/portfolio">
               <p>
                 <FontAwesomeIcon
                   icon={faArrowLeftLong}
@@ -38,12 +34,16 @@ export default function CurrentPortfolio() {
                 />{' '}
                 Tilbake til porteføljen
               </p>
-            </a>
+            </NavLink>
           </div>
           <p className="ingress">Case study</p>
-          <h1>Lorem ipsum</h1>
-
-          <div className="bildecs" />
+          <h1>{portfolio?.title}</h1>
+          <div
+            className="bildecs"
+            style={{
+              backgroundImage: `url(${portfolio?.imageUrl})`,
+            }}
+          ></div>
         </div>
       </article>
 

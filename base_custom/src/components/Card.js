@@ -9,8 +9,11 @@ export default function Card({
   reddit,
   slug,
   kategorier,
+  imageUrl,
 }) {
-  console.log(kategorier)
+  const path = `/portfolio/${slug}`
+
+  console.log(slug)
   return (
     <article>
       <div className="informasjon">
@@ -19,30 +22,44 @@ export default function Card({
         <p>{ingress}</p>
         <ul>
           {kategorier.map((kategori) => (
-            <li key={kategori}>{kategori}</li>
+            <li key={kategori}>
+              <span className="lineUp">
+                <div className="circle" />
+                {kategori.charAt(0).toUpperCase() + kategori.slice(1)}
+              </span>
+            </li>
           ))}
         </ul>
         <div className="buttons">
-          <button type="button">
-            <a href="casestudy.html">Case Study</a>
-          </button>
+          <a href={path}>
+            <button type="button">Case Study</button>
+          </a>
           <div>
-            <button type="button" className="www">
-              <FontAwesomeIcon
-                icon={faArrowUpRightFromSquare}
-                className="fa-solid fa-arrow-up-right-from-square"
-              />
-            </button>
-            <button type="button" className="github">
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="fa-brands fa-github fa-lg"
-              />
-            </button>
+            <a href={live} target="_blank" rel="noreferrer">
+              <button type="button" className="www">
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  className="fa-solid fa-arrow-up-right-from-square"
+                />
+              </button>
+            </a>
+            <a href={reddit} target="_blank" rel="noreferrer">
+              <button type="button" className="github">
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="fa-brands fa-github fa-lg"
+                />
+              </button>
+            </a>
           </div>
         </div>
       </div>
-      <div className="bilde" />
+      <div
+        style={{
+          backgroundImage: `url(${imageUrl})`,
+        }}
+        className="bilde"
+      />
     </article>
   )
 }
