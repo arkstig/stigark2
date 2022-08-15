@@ -35,8 +35,8 @@ const portfolio = {
       of: [{ type: "block" }],
     },
     {
-      title: "Category Set",
-      name: "categorySet",
+      title: "Kategorier",
+      name: "kategoriSet",
       type: "array",
       of: [{ type: "string" }],
       options: {
