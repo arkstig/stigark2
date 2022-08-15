@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
+import Card from '../components/Card'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { getEvents } from '../lib/services/eventService'
+import { getPortfolios } from '../lib/services/eventService'
 
 export default function Portfolio() {
   const [portfolios, setPortfolios] = useState('')
@@ -11,7 +9,7 @@ export default function Portfolio() {
   useEffect(() => {
     try {
       const getPortfoliosData = async () => {
-        const data = await getEvents()
+        const data = await getPortfolios()
         setPortfolios(data)
       }
       getPortfoliosData()
@@ -24,134 +22,18 @@ export default function Portfolio() {
   console.log(portfolios)
   return (
     <div className="portfolios">
-      <article>
-        <div className="informasjon">
-          <p className="ingress">Utvalgt arbeid</p>
-          <h1>Lorem ipsum</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-            eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-            consectetur.
-          </p>
-          <ul>
-            <li>HTML</li>
-            <div className="circle" />
-            <li>CSS</li>
-            <div className="circle" />
-            <li>React</li>
-            <div className="circle" />
-            <li>Sanity</li>
-            <div className="circle" />
-            <li>Javascript</li>
-            <div className="circle" />
-            <li>Github</li>
-          </ul>
-          <div className="buttons">
-            <button type="button">
-              <a href="casestudy.html">Case Study</a>
-            </button>
-            <div>
-              <button type="button" className="www">
-                <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                  className="fa-solid fa-arrow-up-right-from-square"
-                />
-              </button>
-              <button type="button" className="github">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="fa-brands fa-github fa-lg"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="bilde" />
-      </article>
-      <article>
-        <div className="bilde2" />
-        <div className="informasjon2">
-          <p className="ingress">Utvalgt arbeid</p>
-          <h1>Lorem ipsum</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-            eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-            consectetur.
-          </p>
-          <ul>
-            <li>HTML</li>
-            <div className="circle" />
-            <li>CSS</li>
-            <div className="circle" />
-            <li>React</li>
-            <div className="circle" />
-            <li>Sanity</li>
-            <div className="circle" />
-            <li>Javascript</li>
-            <div className="circle" />
-            <li>Github</li>
-          </ul>
-          <div className="buttons">
-            <button type="button">Case Study</button>
-            <div>
-              <button type="button" className="www">
-                <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                  className="fa-solid fa-arrow-up-right-from-square"
-                />
-              </button>
-              <button type="button" className="github">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="fa-brands fa-github fa-lg"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article>
-        <div className="informasjon">
-          <p className="ingress">Utvalgt arbeid</p>
-          <h1>Lorem ipsum</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-            eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-            consectetur.
-          </p>
-          <ul>
-            <li>HTML</li>
-            <div className="circle" />
-            <li>CSS</li>
-            <div className="circle" />
-            <li>React</li>
-            <div className="circle" />
-            <li>Sanity</li>
-            <div className="circle" />
-            <li>Javascript</li>
-            <div className="circle" />
-            <li>Github</li>
-          </ul>
-          <div className="buttons">
-            <button type="button">Case Study</button>
-            <div>
-              <button type="button" className="www">
-                <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                  className="fa-solid fa-arrow-up-right-from-square"
-                />
-              </button>
-              <button type="button" className="github">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="fa-brands fa-github fa-lg"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="bilde" />
-      </article>
+      {portfolios &&
+        portfolios?.map((portfolio) => (
+          <Card
+            key={portfolio._id}
+            title={portfolio.title}
+            ingress={portfolio.ingress}
+            live={portfolio.live}
+            reddit={portfolio.reddit}
+            slug={portfolio.slug}
+            kategorier={portfolio.kategoriSet}
+          />
+        ))}
     </div>
   )
 }

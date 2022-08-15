@@ -13,7 +13,7 @@ const eventFields = `
 
 
 `
-export const getEvents = async () => {
+export const getPortfolios = async () => {
   const data = await client.fetch(`*[_type == "portfolio"]{${eventFields}}`)
   return data
 }
