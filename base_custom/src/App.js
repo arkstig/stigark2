@@ -5,17 +5,13 @@ import Navigation from './components/Navigation'
 import ScrollToTop from './components/Scrolltotop'
 import Layout from './layout/Layout'
 import Contact from './pages/Contact'
+import CurrentPortfolio from './pages/CurrentPortfolio'
 import Home from './pages/Home'
 import Ommeg from './pages/Ommeg'
 import Portfolio from './pages/Portfolio'
-import { getEvents } from './lib/services/eventService'
 
 export default function App() {
   // Write JavaScript, use Hooks, add state and more
-  const getEventData = async () => {
-    const events = await getEvents()
-    console.log(events)
-  }
 
   return (
     <>
@@ -24,15 +20,15 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="ommeg" element={<Ommeg />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio">
+            <Route index element={<Portfolio />} />
+            <Route path=":kursSlug" element={<CurrentPortfolio />} />
+          </Route>
+          <Route path="/ommeg" element={<Ommeg />} />
         </Route>
       </Routes>
       <Aside />
-      <button type="button" onClick={getEventData}>
-        Hent data
-      </button>
       <Footer />
     </>
   )

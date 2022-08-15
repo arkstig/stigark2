@@ -1,9 +1,27 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState, useEffect } from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { getEvents } from '../lib/services/eventService'
 
 export default function Portfolio() {
+  const [portfolios, setPortfolios] = useState('')
+
+  useEffect(() => {
+    try {
+      const getPortfoliosData = async () => {
+        const data = await getEvents()
+        setPortfolios(data)
+      }
+      getPortfoliosData()
+    } catch (error) {
+      // Sender feilmelding tilbake om noe går galt
+      throw new Error(error)
+    }
+  }, [])
+
+  console.log(portfolios)
   return (
     <div className="portfolios">
       <article>
