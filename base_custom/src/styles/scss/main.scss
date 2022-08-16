@@ -71,6 +71,7 @@ h2 {
 
 #light .logo {
   color: #ed0b70;
+  border-color: #FCFCFC;
 }
 
 .logo:hover {
@@ -89,6 +90,11 @@ aside {
   border-bottom-right-radius: 20px;
   filter: drop-shadow(0px 3px 6px #00000045);
 }
+
+#light aside {
+  background-color: #ffe26a;;
+
+}
 aside ul {
   list-style-type: none;
 }
@@ -98,6 +104,13 @@ aside ul li {
 
 .fa-solid {
   color: #ffe26a;
+}
+#light .fa-brands {
+  color: #ed0b70;
+}
+
+#light .fa-solid {
+  color: #ed0b70;
 }
 .fa-brands {
   color: #ffe26a;
@@ -137,6 +150,12 @@ header {
 header.header-bar--hidden {
   transform: translateY(-100%);
 }
+
+#light nav ul li {
+  color: #ed0b70;
+  font-weight: 300;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -155,8 +174,15 @@ nav {
     padding-right: 40px;
    }
 }
+
+
 nav ul li:hover {
   color: #ed0b70;
+  transition: all 0.2s;
+}
+
+#light nav ul li:hover {
+  color: #16123f;
   transition: all 0.2s;
 }
 
