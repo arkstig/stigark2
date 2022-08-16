@@ -69,6 +69,10 @@ h2 {
   border-color: #482673;
 }
 
+#light .logo {
+  color: #ed0b70;
+}
+
 .logo:hover {
   border-color: #ffe26a;
   color: #ed0b70;
@@ -123,6 +127,11 @@ header {
   transition: transform 150ms ease-in-out;
 
   z-index: 100;
+}
+
+#light header {
+  background-color: #FFE26A;
+
 }
 
 header.header-bar--hidden {
