@@ -14,7 +14,7 @@ import Portfolio from './pages/Portfolio'
 export const ThemeContext = createContext(null)
 export default function App() {
   // Write JavaScript, use Hooks, add state and more
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))

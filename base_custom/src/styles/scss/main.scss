@@ -237,10 +237,25 @@ footer {
   filter: drop-shadow(0px 0px 6px #00000045);
 }
 
+#light .cv {
+  background: rgb(252,252,252);
+  color: #16123F;
+  padding-bottom: 13px;
+  filter: drop-shadow(0px 0px 6px #00000015);
+
+background: linear-gradient(176deg, rgba(252,252,252,1) 0%, rgba(255,240,178,1) 100%);
+}
+
 .cv:hover {
   transition: all 0.2s;
   color: #ed0b70;
   filter: drop-shadow(0px 0px 0px #00000045);
+}
+
+#light .cv:hover {
+  transition: all 0.2s;
+  color: #ed0b70;
+
 }
 
 button {
@@ -261,6 +276,19 @@ button {
   filter: drop-shadow(0px 0px 6px #00000045);
   cursor: pointer;
 }
+
+#light button {
+  background: rgb(252,252,252);
+  color: #16123F;
+  padding-bottom: 13px;
+background: linear-gradient(176deg, rgba(252,252,252,1) 0%, rgba(255,240,178,1) 100%);
+filter: drop-shadow(0px 0px 6px #00000015);
+
+}
+
+#light button:hover {
+  color: #ed0b70;
+}
 button:hover {
   transition: all 0.2s;
   color: #ed0b70;
@@ -275,6 +303,20 @@ span.under1 {
   content: '';
   height: 9px;
   background: #ed0b70;
+  position: absolute;
+  z-index: -1;
+  top: 78%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 45px;
+  width: 96%;
+}
+
+#light .under1::before {
+  content: '';
+  height: 9px;
+  background: #fcfcfc;
   position: absolute;
   z-index: -1;
   top: 78%;
@@ -304,6 +346,21 @@ span.under3 {
   width: 100%;
 }
 
+#light .under3::before {
+  content: '';
+  height: 6px;
+
+  background: #FFF1B7;
+  position: absolute;
+  z-index: -1;
+  top: 65%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 45px;
+  width: 100%;
+}
+
 span.under2 {
   position: relative;
   z-index: 1;
@@ -313,6 +370,20 @@ span.under2 {
   content: '';
   height: 9px;
   background: #482673;
+  position: absolute;
+  z-index: -1;
+  top: 78%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 45px;
+  width: 96%;
+}
+
+#light .under2::before {
+  content: '';
+  height: 9px;
+  background: #FFF1B7;
   position: absolute;
   z-index: -1;
   top: 78%;
@@ -484,6 +555,10 @@ label {
   filter: drop-shadow(0px -10px 6px #00000013);
 }
 
+#light label {
+  color: #16123F;
+}
+
 .navn {
   padding: 10px;
   border: 1px solid #fffae5;
@@ -515,6 +590,21 @@ span.under4 {
   height: 7px;
 
   background: #ed0b70;
+  position: absolute;
+  z-index: -1;
+  top: 67%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 45px;
+  width: 110%;
+  margin-left: -4px;
+}
+#light .under4::before {
+  content: '';
+  height: 7px;
+
+  background: #FFF1B7;
   position: absolute;
   z-index: -1;
   top: 67%;
