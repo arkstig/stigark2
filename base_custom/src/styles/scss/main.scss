@@ -15,7 +15,18 @@ body {
   height: 100%;
 }
 
+.switch {
+  background-color: #ed0b70;
+  position: fixed;
+  bottom: 0;
+  right: 48%;
+  margin: 40px;
+}
 
+#light body {
+  background-color: #16123f;
+
+}
 #light {
   background-color: #FFE26A;
   color: #16123F;
@@ -60,6 +71,7 @@ h2 {
 
 .logo {
   font-size: 30px;
+  margin-left: 60px;
   font-family: 'Lato', sans-serif;
   font-weight: 900;
   color: #ffe26a;
@@ -135,7 +147,7 @@ header {
   position: sticky;
   top: 0;
   height: 15vh;
-  padding-left: 30px;
+  padding-left: 0px;
   background-color: #16123f;
   transition: transform 150ms ease-in-out;
 
@@ -152,7 +164,7 @@ header.header-bar--hidden {
 }
 
 #light nav ul li {
-  color: #ed0b70;
+  color: #16123f;
   font-weight: 300;
 }
 
@@ -182,7 +194,7 @@ nav ul li:hover {
 }
 
 #light nav ul li:hover {
-  color: #16123f;
+  color: #ed0b70;
   transition: all 0.2s;
 }
 
@@ -459,6 +471,11 @@ span.under2 {
   column-gap: 10px;
   color: #ed0b70;
 }
+
+#light article ul {
+  background-color: #FFF1B7;
+  color:#120e37;
+}
 .circle {
   background-color: white;
   height: 3px;
@@ -482,6 +499,13 @@ span.under2 {
   height: 60px;
   padding: 0;
   margin-left: 20px;
+
+}
+
+#light .www,
+.github {
+
+  padding-top: 12px;
 }
 
 .buttons {
@@ -529,6 +553,11 @@ input:hover {
   background-color: #ffe26a;
   transition: all 0.2s;
 }
+
+#light input:hover {
+  background-color: #FFF1B7;
+  transition: all 0.2s;
+}
 input:focus {
   outline: 2px solid #ed0b70;
 }
@@ -539,6 +568,11 @@ textarea:hover {
   background-color: #ffe26a;
   transition: all 0.2s;
 }
+#light textarea:hover {
+  background-color: #FFF1B7;
+  transition: all 0.2s;
+}
+
 label {
   display: flex;
   padding: 10px 10px;
