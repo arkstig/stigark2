@@ -11,11 +11,7 @@ export default function Footer() {
         <FontAwesomeIcon icon={faCopyright} className="fa-solid fa-copyright" />{' '}
         2022
       </div>
-      <div className="footer1">
-        <Link to="/contact">
-          <button type="button">Kontakt meg!</button>
-        </Link>
-      </div>{' '}
+      <div className="footer1" />{' '}
     </footer>
   )
 }

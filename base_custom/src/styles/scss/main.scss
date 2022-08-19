@@ -18,11 +18,12 @@ body {
 .switch {
   background-color: #ed0b70;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   right: 80px;
   margin: 40px;
   border-radius: 80px;
   filter: drop-shadow(0px 3px 6px #00000045);
+  z-index: 20;
 
 }
 
@@ -64,7 +65,7 @@ h2 {
   line-height: 1;
 
   font-weight: 400;
-  font-size: 80px;
+  font-size: 70px;
   margin-bottom: 15px;
 }
 
@@ -131,6 +132,7 @@ aside ul li {
   color: #ffe26a;
 }
 
+
 .fa-solid:hover {
   transition: all 0.2s;
   color: #ed0b70;
@@ -187,13 +189,10 @@ nav {
     flex-direction: row;
    } li {
     padding-right: 40px;
-   }
-}
-
-
-nav ul li:hover {
-  color: #ed0b70;
-  transition: all 0.2s;
+   }:hover {
+    color: #ed0b70;
+    transition: all 0.2s;
+  }
 }
 
 #light nav ul li:hover {
@@ -220,6 +219,7 @@ footer {
   align-items: center;
   padding-bottom: 30px;
   padding-top: 15px;
+  height: 80px;
 }
 .footer1 {
   margin-right: 60px;
@@ -487,6 +487,11 @@ span.under2 {
   margin-bottom: 3px;
   margin-right: 5px;
 }
+
+#light .circle {
+  background-color: #ed0b70;
+  margin-bottom: 3px;
+}
 .lineUp {
   display: flex;
   align-items: center;
@@ -505,12 +510,12 @@ span.under2 {
 
 }
 
-#light .www,
-.github {
+#light .www {
 
   padding-top: 12px;
+}#light .github {
+  padding-top: 12px;
 }
-
 .buttons {
   display: flex;
   justify-content: space-between;

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import ReactTooltip from 'react-tooltip'
 import useScrollListener from '../hooks/useScrollListener'
 
 export default function Navigation() {
@@ -42,9 +43,18 @@ export default function Navigation() {
             <li>Kontakt</li>
           </NavLink>
         </ul>
-        <a href="index.html">
+        <a data-tip data-for="cV" href="index.html">
           <div className="cv">Curriculum Vitae</div>
         </a>
+        <ReactTooltip
+          backgroundColor="#ed0b70"
+          textColor="black"
+          id="cV"
+          effect="solid"
+          place="bottom"
+        >
+          Last ned min CV.
+        </ReactTooltip>
       </nav>
     </header>
   )

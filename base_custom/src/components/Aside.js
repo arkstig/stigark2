@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ReactTooltip from 'react-tooltip'
 
 import {
   faLinkedinIn,
@@ -12,9 +13,18 @@ export default function Aside() {
     <aside>
       <ul className="social">
         <li>
-          <a href="mailto:stig.ark@gmail.com">
+          <a data-tip data-for="ePost" href="mailto:stig.ark@gmail.com">
             <FontAwesomeIcon icon={faAt} className="fa-solid fa-at fa-lg" />
           </a>
+          <ReactTooltip
+            backgroundColor="#ed0b70"
+            textColor="black"
+            id="ePost"
+            place="top"
+            effect="solid"
+          >
+            Send meg en epost!
+          </ReactTooltip>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/stigark/">

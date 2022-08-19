@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import ReactTooltip from 'react-tooltip'
 
 export default function Card({
   title,
@@ -32,24 +33,58 @@ export default function Card({
         </ul>
         <div className="buttons">
           <a href={path}>
-            <button type="button">Case Study</button>
+            <button data-tip data-for="caseStudy" type="button">
+              Case Study
+            </button>
+            <ReactTooltip
+              backgroundColor="#ed0b70"
+              textColor="black"
+              id="caseStudy"
+              effect="solid"
+              place="bottom"
+            >
+              Se prosessen.
+            </ReactTooltip>
           </a>
           <div>
             <a href={live} target="_blank" rel="noreferrer">
-              <button type="button" className="www">
+              <button data-tip data-for="wwwW" type="button" className="www">
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
                   className="fa-solid fa-arrow-up-right-from-square"
                 />
               </button>
+              <ReactTooltip
+                backgroundColor="#ed0b70"
+                textColor="black"
+                id="wwwW"
+                effect="solid"
+                place="bottom"
+              >
+                Se prosjektet live.
+              </ReactTooltip>
             </a>
             <a href={reddit} target="_blank" rel="noreferrer">
-              <button type="button" className="github">
+              <button
+                data-tip
+                data-for="gitHub"
+                type="button"
+                className="github"
+              >
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="fa-brands fa-github fa-lg"
                 />
               </button>
+              <ReactTooltip
+                backgroundColor="#ed0b70"
+                textColor="black"
+                id="gitHub"
+                effect="solid"
+                place="bottom"
+              >
+                Se koden på github.
+              </ReactTooltip>
             </a>
           </div>
         </div>
