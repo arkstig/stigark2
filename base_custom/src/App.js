@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ReactSwitch from 'react-switch'
+import { RiSunLine, RiSunFill, RiMoonFill, RiMoonLine } from 'react-icons/ri'
 import Aside from './components/Aside'
 import Footer from './components/Footer'
 import Loading from './components/Loading'
@@ -25,7 +26,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000)
+    setTimeout(() => setLoading(false), 4000)
   }, [])
 
   return (
@@ -34,7 +35,78 @@ export default function App() {
         <div id={theme}>
           <Navigation />
           <div className="switch">
-            <ReactSwitch onChange={toggleTheme} checked={theme === 'light'} />
+            <ReactSwitch
+              offColor="#ffe26a"
+              onColor="#120e37"
+              offHandleColor="#120e37"
+              onHandleColor="#ffe26a"
+              handleDiameter={36}
+              height={40}
+              width={70}
+              borderRadius={80}
+              activeBoxShadow="0px 0px 1px 2px #fffc35"
+              uncheckedIcon={
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100%',
+                    fontSize: 20,
+                    color: '#ED0B70',
+                    paddingRight: 2,
+                  }}
+                >
+                  <RiSunLine />
+                </div>
+              }
+              checkedIcon={
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100%',
+                    fontSize: 20,
+                    color: '#FFE26A',
+                  }}
+                >
+                  <RiMoonLine />
+                </div>
+              }
+              uncheckedHandleIcon={
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100%',
+                    fontSize: 18,
+                    color: '#FFE26A',
+                  }}
+                >
+                  <RiMoonFill />
+                </div>
+              }
+              checkedHandleIcon={
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100%',
+                    color: '#ED0B70',
+                    fontSize: 18,
+                  }}
+                >
+                  <RiSunFill />
+                </div>
+              }
+              className="react-switch"
+              id="small-radius-switch"
+              onChange={toggleTheme}
+              checked={theme === 'light'}
+            />
           </div>
           <ScrollToTop />
           <Routes>
