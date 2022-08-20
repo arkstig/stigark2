@@ -11,7 +11,8 @@ export default function Home() {
       </h2>
       <p>
         Jeg er en front-end utvikler/designer med fokus på brukeropplevelse, god
-        informasjonsarkitektur og tilgjengelighet.
+        informasjonsarkitektur og tilgjengelighet. Velkommen til min personlige
+        nettside og portefølje.
       </p>
       <Link to="/portfolio">
         <button type="button">Se mitt arbeid!</button>

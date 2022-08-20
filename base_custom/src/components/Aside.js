@@ -20,35 +20,78 @@ export default function Aside() {
             backgroundColor="#ed0b70"
             textColor="black"
             id="ePost"
-            place="top"
-            effect="solid"
+            place="right"
+            effect="float"
+            width="100px"
+            overridePosition={() => ({ left: 40, top: -10 })}
           >
             Send meg en epost!
           </ReactTooltip>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/stigark/">
+          <a
+            data-tip
+            data-for="linkedIn"
+            href="https://www.linkedin.com/in/stigark/"
+          >
             <FontAwesomeIcon
               className="fa-brands fa-linkedin-in fa-lg"
               icon={faLinkedinIn}
             />
           </a>
+          <ReactTooltip
+            backgroundColor="#ed0b70"
+            textColor="black"
+            id="linkedIn"
+            place="right"
+            effect="float"
+            width="100px"
+            overridePosition={() => ({ left: 40, top: 50 })}
+          >
+            Besøk min LinkedIn!
+          </ReactTooltip>
         </li>
         <li>
-          <a href="https://github.com/arkstig/">
+          <a data-tip data-for="gitHub2" href="https://github.com/arkstig/">
             <FontAwesomeIcon
               icon={faGithub}
               className="fa-brands fa-github fa-lg"
             />
           </a>
+          <ReactTooltip
+            backgroundColor="#ed0b70"
+            textColor="black"
+            id="gitHub2"
+            place="right"
+            effect="float"
+            width="100px"
+            overridePosition={() => ({ left: 40, top: 100 })}
+          >
+            Besøk min Github!
+          </ReactTooltip>
         </li>
         <li>
-          <a href="https://www.instagram.com/stigark">
+          <a
+            data-tip
+            data-for="instaGram"
+            href="https://www.instagram.com/stigark"
+          >
             <FontAwesomeIcon
               icon={faInstagram}
               className="fa-brands fa-instagram fa-lg"
             />
           </a>
+          <ReactTooltip
+            backgroundColor="#ed0b70"
+            textColor="black"
+            id="instaGram"
+            place="right"
+            effect="float"
+            width="100px"
+            overridePosition={() => ({ left: 40, top: 160 })}
+          >
+            Besøk min instagram!
+          </ReactTooltip>
         </li>
       </ul>
     </aside>

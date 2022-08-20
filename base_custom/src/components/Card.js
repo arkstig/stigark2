@@ -40,7 +40,7 @@ export default function Card({
               backgroundColor="#ed0b70"
               textColor="black"
               id="caseStudy"
-              effect="solid"
+              effect="float"
               place="bottom"
             >
               Se prosessen.
@@ -58,7 +58,7 @@ export default function Card({
                 backgroundColor="#ed0b70"
                 textColor="black"
                 id="wwwW"
-                effect="solid"
+                effect="float"
                 place="bottom"
               >
                 Se prosjektet live.
@@ -80,7 +80,7 @@ export default function Card({
                 backgroundColor="#ed0b70"
                 textColor="black"
                 id="gitHub"
-                effect="solid"
+                effect="float"
                 place="bottom"
               >
                 Se koden på github.

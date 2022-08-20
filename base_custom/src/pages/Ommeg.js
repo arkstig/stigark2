@@ -6,7 +6,7 @@ export default function Ommeg() {
 
       <p>
         Jeg er en front-end utvikler/designer med fokus på brukeropplevelse, god
-        informasjonsarkitektur og tilgjengelighet.
+        informasjonsarkitektur og tilgjengelighet. Velkommen til min portefølje.
       </p>
       <button type="button">Se mitt arbeid!</button>
     </article>

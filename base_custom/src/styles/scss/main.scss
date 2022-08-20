@@ -41,7 +41,7 @@ a {
   cursor: pointer;
 }
 p {
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 2;
@@ -52,7 +52,7 @@ h2 {
 }
 h1 {
   font-weight: 900;
-  font-size: 80px;
+  font-size: 70px;
   margin-top: -10px;
   color: #ffe26a;
   margin-bottom: 10px;
@@ -70,7 +70,7 @@ h2 {
 }
 
 .ingress {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .logo {
@@ -100,7 +100,7 @@ h2 {
 aside {
   background-color: #16123f;
   position: fixed;
-  top: 40%;
+  bottom: 40%;
   padding: 10px 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -113,6 +113,8 @@ aside {
 }
 aside ul {
   list-style-type: none;
+  overflow: visible;
+
 }
 aside ul li {
   padding: 15px 0px;

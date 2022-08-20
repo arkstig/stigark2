@@ -50,7 +50,7 @@ export default function Navigation() {
           backgroundColor="#ed0b70"
           textColor="black"
           id="cV"
-          effect="solid"
+          effect="float"
           place="bottom"
         >
           Last ned min CV.
