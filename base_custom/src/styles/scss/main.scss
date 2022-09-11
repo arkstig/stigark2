@@ -418,7 +418,6 @@ span.under2 {
   flex-direction: column;
   row-gap: 120px;
   width: 100%;
-
   margin-bottom: 100px;
 }
 .portfolios article {
@@ -426,6 +425,10 @@ span.under2 {
   flex-direction: row;
   row-gap: 70px;
 }
+.portfolios article:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
 .informasjon {
   display: flex;
   flex-direction: column;
@@ -436,36 +439,16 @@ span.under2 {
 }
 .bilde {
   width: 40%;
-  background-image: url('img/code.jpeg'); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-image: url('img/code.jpeg'); 
+  background-color: #cccccc;
+  height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   background-size: cover;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
 }
 
-.bilde2 {
-  width: 40%;
-  background-image: url('img/code.jpeg'); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 50px;
-}
-
-.informasjon2 {
-  width: 40%;
-  margin-right: 20%;
-  padding-left: 5%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
 .portfolios article ul {
   background-color: #120e37;
   padding: 20px;
@@ -725,6 +708,7 @@ span.under4 {
   height: 800px;
   display: flex;
 }
+
 
 @media only screen and (max-width: 1150px) {
   .navigasjon {
