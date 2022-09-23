@@ -43,7 +43,7 @@ export default function CurrentPortfolioMain() {
             style={{
               backgroundImage: `url(${portfolioMain?.imageUrl})`,
             }}
-          ></div>
+          />
         </div>
       </article>
 
