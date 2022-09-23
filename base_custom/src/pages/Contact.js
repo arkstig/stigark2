@@ -16,6 +16,8 @@ export default function Contact() {
     setMessage(event.currentTarget.value)
   }
 
+  console.log(setSent)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (name === '' || email === '' || message === '') {

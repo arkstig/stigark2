@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 
-import { Link } from 'react-router-dom'
-
 export default function Footer() {
   return (
     <footer>

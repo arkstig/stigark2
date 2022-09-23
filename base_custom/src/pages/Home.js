@@ -55,7 +55,7 @@ export default function Home() {
       </div>
       <div>
         <Link to="/portfolioMain">
-          <button>Se hele porteføljen</button>
+          <button type="button">Se hele porteføljen</button>
         </Link>
       </div>
     </>
