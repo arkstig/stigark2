@@ -13,6 +13,8 @@ import CurrentPortfolio from './pages/CurrentPortfolio'
 import Home from './pages/Home'
 import Ommeg from './pages/Ommeg'
 import Portfolio from './pages/Portfolio'
+import PortfolioMain from './pages/PortfolioMain'
+import CurrentPortfolioMain from './pages/CurrentPortfolioMain'
 
 export const ThemeContext = createContext(null)
 export default function App() {
@@ -116,6 +118,10 @@ export default function App() {
               <Route path="/portfolio">
                 <Route index element={<Portfolio />} />
                 <Route path=":slug" element={<CurrentPortfolio />} />
+              </Route>
+              <Route path="/portfolioMain">
+                <Route index element={<PortfolioMain />} />
+                <Route path=":slug" element={<CurrentPortfolioMain />} />
               </Route>
               <Route path="/ommeg" element={<Ommeg />} />
             </Route>

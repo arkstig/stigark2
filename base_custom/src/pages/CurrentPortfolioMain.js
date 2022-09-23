@@ -2,19 +2,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { useParams, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { getPortfolio } from '../lib/services/eventService'
+import { getPortfolioMain } from '../lib/services/eventService'
 
-export default function CurrentPortfolio() {
-  const [portfolio, setPortfolio] = useState(null)
+export default function CurrentPortfolioMain() {
+  const [portfolioMain, setPortfolioMain] = useState(null)
   const { slug } = useParams()
 
   useEffect(() => {
     try {
-      const getPortfolioData = async () => {
-        const data = await getPortfolio(slug)
-        setPortfolio(data)
+      const getPortfolioMainData = async () => {
+        const data = await getPortfolioMain(slug)
+        setPortfolioMain(data)
       }
-      getPortfolioData()
+      getPortfolioMainData()
     } catch (error) {
       // Sender feilmelding tilbake om noe går galt
       throw new Error(error)
@@ -26,7 +26,7 @@ export default function CurrentPortfolio() {
       <article>
         <div className="informasjon4">
           <div className="tilbake">
-            <NavLink to="/portfolio">
+            <NavLink to="/portfolioMain">
               <p>
                 <FontAwesomeIcon
                   icon={faArrowLeftLong}
@@ -37,11 +37,11 @@ export default function CurrentPortfolio() {
             </NavLink>
           </div>
           <p className="ingress">Case study</p>
-          <h1>{portfolio?.title}</h1>
+          <h1>{portfolioMain?.title}</h1>
           <div
             className="bildecs"
             style={{
-              backgroundImage: `url(${portfolio?.imageUrl})`,
+              backgroundImage: `url(${portfolioMain?.imageUrl})`,
             }}
           ></div>
         </div>

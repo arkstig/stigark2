@@ -31,8 +31,8 @@ export default function Navigation() {
             <li>Hjem</li>
           </NavLink>
 
-          <NavLink style={linkStyle} to="/portfolio">
-            <li>Portefølje</li>
+          <NavLink style={linkStyle} to="/portfolioMain">
+            <li>Arbeid</li>
           </NavLink>
 
           <NavLink style={linkStyle} to="/ommeg">

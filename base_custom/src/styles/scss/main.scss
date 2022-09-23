@@ -411,7 +411,7 @@ span.under2 {
   width: 96%;
 }
 
-/* HER KOMMER FOR PORTEFØLJE SIDEN, EGEN CSS */
+/* HER KOMMER FOR UTVALGT PORTEFØLJE SIDEN, EGEN CSS */
 
 .portfolios {
   display: flex;
@@ -423,20 +423,22 @@ span.under2 {
 .portfolios article {
   display: flex;
   flex-direction: row;
-  row-gap: 70px;
 }
-.portfolios article:nth-child(2) {
+.portfolios article:nth-child(even) {
   flex-direction: row-reverse;
 }
+
 
 .informasjon {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  width: 40%;
-  margin-left: 20%;
-  padding-right: 5%;
+  width: 50%;
+  margin-left: 10%;
+  padding-right: 10%;
 }
+
+
 .bilde {
   width: 40%;
   background-image: url('img/code.jpeg'); 
@@ -447,6 +449,16 @@ span.under2 {
   background-size: cover;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
+  filter: drop-shadow(0px 0px 6px #00000045);
+
+}
+.portfolios article:nth-child(even) .bilde {
+  background-color: yellow;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+
 }
 
 .portfolios article ul {
@@ -505,6 +517,114 @@ span.under2 {
   display: flex;
   justify-content: space-between;
 }
+
+/* HER KOMMER FOR PORTEFØLJE SIDE 2, EGEN CSS */
+
+.portfoliosMain {
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.portfoliosMain article {
+  display: flex;
+  flex-direction: row;
+}
+.portfoliosMain article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+.informasjonMain {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 50%;
+  margin-left: 10%;
+  padding-right: 10%;
+}
+
+
+.bildeMain {
+  width: 40%;
+  background-image: url('img/code.jpeg'); 
+  background-color: #cccccc;
+  height: 300px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  filter: drop-shadow(0px 0px 6px #00000045);
+
+}
+.portfoliosMain article:nth-child(even) .bildeMain {
+  background-color: yellow;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+
+}
+
+.portfoliosMain article ul {
+  background-color: #120e37;
+  padding: 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  color: #ed0b70;
+}
+
+#light article ul {
+  background-color: #FFF1B7;
+  color:#120e37;
+}
+.circle {
+  background-color: white;
+  height: 3px;
+  width: 3px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+#light .circle {
+  background-color: #ed0b70;
+  margin-bottom: 3px;
+}
+.lineUp {
+  display: flex;
+  align-items: center;
+
+}
+.portfolios article ul li {
+  display: inline;
+}
+
+.www,
+.github {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin-left: 20px;
+
+}
+
+#light .www {
+
+  padding-top: 12px;
+}#light .github {
+  padding-top: 12px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /* HER KOMMER KONTAKT SIDEN - EGEN CSS */
 

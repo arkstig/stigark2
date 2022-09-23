@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 import Card from '../components/Card'
 
 import { getPortfolios } from '../lib/services/eventService'
@@ -21,20 +23,27 @@ export default function Portfolio() {
 
   console.log(portfolios)
   return (
-    <div className="portfolios">
-      {portfolios &&
-        portfolios?.map((portfolio) => (
-          <Card
-            key={portfolio.id}
-            title={portfolio.title}
-            ingress={portfolio.ingress}
-            live={portfolio.live}
-            reddit={portfolio.reddit}
-            slug={portfolio.portfoliosSlug}
-            kategorier={portfolio.kategoriSet}
-            imageUrl={portfolio.imageUrl}
-          />
-        ))}
-    </div>
+    <>
+      <div className="portfolios">
+        {portfolios &&
+          portfolios?.map((portfolio) => (
+            <Card
+              key={portfolio.id}
+              title={portfolio.title}
+              ingress={portfolio.ingress}
+              live={portfolio.live}
+              reddit={portfolio.reddit}
+              slug={portfolio.portfoliosSlug}
+              kategorier={portfolio.kategoriSet}
+              imageUrl={portfolio.imageUrl}
+            />
+          ))}
+      </div>
+      <div>
+        <Link to="/portfolioMain">
+          <button>Se hele porteføljen</button>
+        </Link>
+      </div>
+    </>
   )
 }
