@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import ReactTooltip from 'react-tooltip'
+// import ReactTooltip from 'react-tooltip'
 import useScrollListener from '../hooks/useScrollListener'
 
 export default function Navigation() {
   const linkStyle = ({ isActive }) => ({
-    color: isActive ? '#ED0B70' : '#FFE26A',
+    color: isActive ? '#ffe26a' : '#FCFCFC',
   })
 
   const [navClassList, setNavClassList] = useState([])
@@ -23,7 +23,7 @@ export default function Navigation() {
   return (
     <header className={navClassList.join(' ')}>
       <NavLink style={linkStyle} to="/">
-        <span className="logo">SA</span>
+        <span className="logo">Stig Ark</span>
       </NavLink>
       <nav>
         <ul className="navigasjon">
@@ -43,7 +43,8 @@ export default function Navigation() {
             <li>Kontakt</li>
           </NavLink>
         </ul>
-        <a data-tip data-for="cV" href="index.html">
+        
+        {/* <a data-tip data-for="cV" href="index.html">
           <div className="cv">Curriculum Vitae</div>
         </a>
         <ReactTooltip
@@ -54,7 +55,7 @@ export default function Navigation() {
           place="bottom"
         >
           Last ned min CV.
-        </ReactTooltip>
+        </ReactTooltip> */}
       </nav>
     </header>
   )

@@ -38,14 +38,14 @@ export default function App() {
           <Navigation />
           <div className="switch">
             <ReactSwitch
-              offColor="#ffe26a"
-              onColor="#120e37"
-              offHandleColor="#120e37"
-              onHandleColor="#ffe26a"
+              offColor="#F6F6F6"
+              onColor="#111111"
+              offHandleColor="#111111"
+              onHandleColor="#F6F6F6"
               handleDiameter={36}
               height={40}
               width={70}
-              borderRadius={80}
+              borderRadius={2}
               activeBoxShadow="0px 0px 1px 2px #fffc35"
               uncheckedIcon={
                 <div

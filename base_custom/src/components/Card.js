@@ -19,13 +19,12 @@ export default function Card({
     <article>
       <div className="informasjon">
         <p className="ingress">Utvalgt arbeid</p>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <p>{ingress}</p>
         <ul>
           {kategorier.map((kategori) => (
             <li key={kategori}>
               <span className="lineUp">
-                <div className="circle" />
                 {kategori.charAt(0).toUpperCase() + kategori.slice(1)}
               </span>
             </li>
@@ -46,47 +45,6 @@ export default function Card({
               Se prosessen.
             </ReactTooltip>
           </a>
-          <div>
-            <a href={live} target="_blank" rel="noreferrer">
-              <button data-tip data-for="wwwW" type="button" className="www">
-                <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                  className="fa-solid fa-arrow-up-right-from-square"
-                />
-              </button>
-              <ReactTooltip
-                backgroundColor="#ed0b70"
-                textColor="black"
-                id="wwwW"
-                effect="float"
-                place="bottom"
-              >
-                Se prosjektet live.
-              </ReactTooltip>
-            </a>
-            <a href={reddit} target="_blank" rel="noreferrer">
-              <button
-                data-tip
-                data-for="gitHub"
-                type="button"
-                className="github"
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="fa-brands fa-github fa-lg"
-                />
-              </button>
-              <ReactTooltip
-                backgroundColor="#ed0b70"
-                textColor="black"
-                id="gitHub"
-                effect="float"
-                place="bottom"
-              >
-                Se koden på github.
-              </ReactTooltip>
-            </a>
-          </div>
         </div>
       </div>
       <div
