@@ -19,7 +19,7 @@ body {
 .switch {
   background-color: #ed0b70;
   position: fixed;
-  top: 21px;
+  top: 70px;
   right: 30px;
   border-radius: 2px;
   filter: drop-shadow(0px 3px 6px #00000045);
@@ -727,13 +727,15 @@ span.under4 {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+.hamburger {
+  display: none
+}
+
 
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 1150px) {
-  .navigasjon {
-    display: none;
-  }
+  
       
       .informasjon {
   
@@ -768,5 +770,32 @@ span.under4 {
     
 
   }
+  /*HAMBURGER MENY*/
+.hamburger {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+  display: block;
+}
+
+.navigasjon-mobile ul {
+ display: flex;
+ flex-direction: column;
+  position: absolute;
+ row-gap: 20px;
+ top: 12vh;
+ right: 0;
+ padding-right: 20px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+ border-bottom-left-radius: 2px;
+ border-bottom-right-radius: 2px;
+width: 100%;
+ background-color: #1A1A1A;
+}
+
+.navigasjon {
+  display: none;
+}
   
 }

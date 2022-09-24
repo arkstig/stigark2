@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 // import ReactTooltip from 'react-tooltip'
 import useScrollListener from '../hooks/useScrollListener'
+import MobileNavigation from './MobileNavigation'
 
 export default function Navigation() {
   const linkStyle = ({ isActive }) => ({
@@ -26,6 +27,7 @@ export default function Navigation() {
         <span className="logo">Stig Ark</span>
       </NavLink>
       <nav>
+        <MobileNavigation />
         <ul className="navigasjon">
           <NavLink style={linkStyle} to="/">
             <li>Hjem</li>
@@ -43,7 +45,6 @@ export default function Navigation() {
             <li>Kontakt</li>
           </NavLink>
         </ul>
-        
         {/* <a data-tip data-for="cV" href="index.html">
           <div className="cv">Curriculum Vitae</div>
         </a>
