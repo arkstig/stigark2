@@ -37,11 +37,7 @@ export default function PortfolioMain() {
             />
           ))}
       </div>
-      <BsMouse
-        className="mousePortfolio"
-        size="30px"
-        color="white"
-      />
+      <BsMouse className="mousePortfolio" size="30px" color="white" />
     </>
   )
 }
