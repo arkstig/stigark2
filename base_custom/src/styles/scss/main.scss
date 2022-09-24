@@ -19,7 +19,7 @@ body {
 .switch {
   background-color: #ed0b70;
   position: fixed;
-  top: 70px;
+  top: 3.5vh;
   right: 30px;
   border-radius: 2px;
   filter: drop-shadow(0px 3px 6px #00000045);
@@ -318,7 +318,7 @@ button:hover {
 .portfolios {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  
   width: 100%;
 }
 .portfolios article {
@@ -752,14 +752,24 @@ span.under4 {
 }
 @media only screen and (max-width: 920px) { 
   .gridHome {
-    min-width: 100vh;
+
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
+    min-width: 100vw;
+  }
+  .portfolios article {
+    display: flex;
+    flex-direction: row;
+    min-height: 50vh;
+    height: 50%;
   }
   main {
  
     align-content: stretch;
 
+  }
+  .switch { 
+    right: 110px;
   }
   .home {
     width: 100%;
@@ -797,5 +807,80 @@ width: 100%;
 .navigasjon {
   display: none;
 }
-  
+
+aside {
+  bottom: 0%;
+  left: 35%;
+  border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  width: 30%;
 }
+  
+.social {
+  display: flex;
+  column-gap: 25px;
+  width: 100%;
+  justify-content: center;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  aside {
+    bottom: 0%;
+    left: 0%;
+    border-top-right-radius: 2px;
+    border-top-right-radius: 2px;
+    width: 100%;
+  }
+
+
+
+  .social {
+    display: flex;
+    column-gap: 25px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portfolios  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+  }
+  .portfolios article  {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+  }
+
+  .portfolios article:nth-child(even) {
+    flex-direction:row-reverse;
+  }
+  .portfolios article:nth-child(even) .bilde {
+    width: 40%;
+  }
+
+  .informasjon {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+  }
+  .bilde {
+    width: 40%;
+  
+
+  }
+  footer {
+    margin-bottom: 80px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+} 
