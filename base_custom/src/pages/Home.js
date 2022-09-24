@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import Card from '../components/Card'
@@ -21,16 +20,9 @@ export default function Home() {
     }
   }, [])
   return (
-    <>
     <div className="gridHome">
       <article className="home">
-       
-        <h2>
-          Jeg utvikler og
-          designer digitale produkter.
-        </h2>
-   
-       
+        <h2>Jeg utvikler og designer digitale produkter.</h2>
       </article>
       <div className="portfolios">
         {portfolios &&
@@ -47,7 +39,6 @@ export default function Home() {
             />
           ))}
       </div>
-      </div>
-    </>
+    </div>
   )
 }

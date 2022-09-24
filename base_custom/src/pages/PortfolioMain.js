@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
-
+import { BsMouse } from 'react-icons/bs'
 import CardMain from '../components/CardMain'
-
 import { getPortfoliosMain } from '../lib/services/eventService'
 
 export default function PortfolioMain() {
@@ -20,22 +19,29 @@ export default function PortfolioMain() {
     }
   }, [])
 
-  console.log(portfoliosMain)
   return (
-    <div className="portfoliosMain">
-      {portfoliosMain &&
-        portfoliosMain?.map((portfolio) => (
-          <CardMain
-            key={portfolio.id}
-            title={portfolio.title}
-            ingress={portfolio.ingress}
-            live={portfolio.live}
-            reddit={portfolio.reddit}
-            slug={portfolio.portfoliosSlug}
-            kategorier={portfolio.kategoriSet}
-            imageUrl={portfolio.imageUrl}
-          />
-        ))}
-    </div>
+    <>
+      <div className="portfoliosMain">
+        {portfoliosMain &&
+          portfoliosMain?.map((portfolio) => (
+            <CardMain
+              key={portfolio.id}
+              title={portfolio.title}
+              ingress={portfolio.ingress}
+              live={portfolio.live}
+              reddit={portfolio.reddit}
+              slug={portfolio.portfoliosSlug}
+              kategorier={portfolio.kategoriSet}
+              imageUrl={portfolio.imageUrl}
+              colorcode={portfolio.colorcode}
+            />
+          ))}
+      </div>
+      <BsMouse
+        className="mousePortfolio"
+        size="30px"
+        color="white"
+      />
+    </>
   )
 }

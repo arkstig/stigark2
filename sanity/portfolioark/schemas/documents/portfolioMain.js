@@ -1,3 +1,4 @@
+
 const portfolioMain = {
   title: "PortfolioMain",
   name: "portfolioMain",
@@ -26,6 +27,11 @@ const portfolioMain = {
     {
       title: "Ingress",
       name: "ingress",
+      type: "text",
+    },
+    {
+      title: "Colorcode",
+      name: "colorcode",
       type: "text",
     },
     {

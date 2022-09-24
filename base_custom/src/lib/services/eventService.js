@@ -10,7 +10,8 @@ const eventFields = `
   kategoriSet,
   reddit,
   live,
-  'id': _id
+  'id': _id,
+  colorcode
 
 
 `

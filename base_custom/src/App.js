@@ -38,7 +38,7 @@ export default function App() {
           <Navigation />
           <div className="switch">
             <ReactSwitch
-              offColor="#F6F6F6"
+              offColor="#ffffff"
               onColor="#111111"
               offHandleColor="#111111"
               onHandleColor="#F6F6F6"
@@ -55,7 +55,7 @@ export default function App() {
                     alignItems: 'center',
                     height: '100%',
                     fontSize: 20,
-                    color: '#ED0B70',
+                    color: '#111111',
                     paddingRight: 2,
                   }}
                 >
@@ -70,7 +70,7 @@ export default function App() {
                     alignItems: 'center',
                     height: '100%',
                     fontSize: 20,
-                    color: '#FFE26A',
+                    color: '#ffffff',
                   }}
                 >
                   <RiMoonLine />
@@ -97,7 +97,7 @@ export default function App() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '100%',
-                    color: '#ED0B70',
+                    color: '#FFE26A',
                     fontSize: 18,
                   }}
                 >

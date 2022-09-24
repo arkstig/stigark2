@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { AiOutlineMenu } from 'react-icons/ai'
-import { AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { useState } from 'react'
 
 export default function MobileNavigation() {

@@ -1,17 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import ReactTooltip from 'react-tooltip'
 
-export default function Card({
-  title,
-  ingress,
-  live,
-  reddit,
-  slug,
-  kategorier,
-  imageUrl,
-}) {
+export default function Card({ title, ingress, slug, kategorier, imageUrl }) {
   const path = `/portfolio/${slug}`
 
   console.log(slug)
