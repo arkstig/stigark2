@@ -78,7 +78,6 @@ h2 {
   font-family: "Lato", sans-serif;
   font-weight: 800;
   color: #ffe26a;
-
   border-color: #482673;
 }
 
@@ -91,7 +90,6 @@ h2 {
   border-color: #ffe26a;
   color: #ed0b70;
   transition: all 0.2s;
-  font-size: 30px;
 }
 
 aside {
@@ -387,7 +385,7 @@ button:hover {
 /* HER KOMMER FOR PORTEFØLJE SIDE 2, EGEN CSS */
 .mousePortfolio {
   position: fixed;
-  bottom: 2%;
+  bottom: 4%;
 }
 .portfoliosMain {
   display: flex;
@@ -395,10 +393,10 @@ button:hover {
   flex-wrap: wrap;
   width: 100%;
   flex: 50%;
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
   row-gap: 60px;
-  margin-top: 100px;
+  margin-top: 70px;
  
 
 }
@@ -407,14 +405,16 @@ button:hover {
   flex-direction: row;
   width: 50%;
   justify-content: center;
+  
 
 }
 .bgPortfolio {
   width: 90%;
-  height:80vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 
 }
 
@@ -436,6 +436,7 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 2px;
 
 
 }
@@ -786,6 +787,24 @@ span.under4 {
     width: 100%;
     justify-content: center;
   }
+  .portfoliosMain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    row-gap: 60px;
+    margin-top: 70px;
+     article {
+     
+      width: 100%;
+     
+      
+    
+    }
+  
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -858,4 +877,10 @@ span.under4 {
     flex-direction: row;
     flex-wrap: nowrap;
   }
+  .logo:hover {
+  
+    color: #ffe26a;
+    transition: all 0.2s;
+  }
+
 }
