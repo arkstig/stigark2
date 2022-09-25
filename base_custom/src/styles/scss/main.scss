@@ -381,7 +381,7 @@ button:hover {
 }
 
 /* HER KOMMER FOR PORTEFØLJE SIDE 2, EGEN CSS */
-.mousePortfolio {
+.mouseClassList {
   position: fixed;
   bottom: 4%;
 }
@@ -395,38 +395,52 @@ button:hover {
   padding-left: 5%;
   row-gap: 60px;
   margin-top: 70px;
- 
-
+  margin-bottom: 80px;
 }
 .portfoliosMain article {
   display: flex;
   flex-direction: row;
   width: 50%;
   justify-content: center;
-  
-
 }
 .bgPortfolio {
   width: 90%;
   height: 70vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  
-
+  align-items: flex-end;
 }
+
+.bgPortfolio:hover + .informasjonMain {
+  display: flex;
+}
+
 
 .informasjonMain {
   display: flex;
   height: 100%;
   flex-direction: column;
   row-gap: 10px;
-  margin-left: 10%;
+  padding-left: 10%;
   padding-right: 10%;
   justify-content: center;
   align-items: center;
+  background-color: #1a1a1aa4;
+  width: 100%;
 }
+.informasjonMainMobile {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1aa4;
+  width: 100%;
+}
+
 
 .bildeMain {
   width: 100%;
@@ -435,14 +449,10 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 2px;
-  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
-
-
-.portfoliosMain article:nth-child(even) .bildeMain {
-  background-color: yellow;
-}
 
 .portfoliosMain article ul {
   display: flex;
@@ -722,6 +732,12 @@ span.under4 {
   }
 }
 @media only screen and (max-width: 920px) {
+  .informasjonMainMobile {
+    display:flex;
+  }
+  .informasjonMain { 
+    display: none;
+  }
   .gridHome {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -809,6 +825,7 @@ span.under4 {
     margin: 0;
     padding: 0;
     background: rgba(0, 0, 0, 0.6);
+    align-items: center;
   }
 }
 

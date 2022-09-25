@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { BsMouse } from 'react-icons/bs'
 import CardMain from '../components/CardMain'
 import { getPortfoliosMain } from '../lib/services/eventService'
+
 
 export default function PortfolioMain() {
   const [portfoliosMain, setPortfoliosMain] = useState('')
@@ -18,6 +18,8 @@ export default function PortfolioMain() {
       throw new Error(error)
     }
   }, [])
+
+
 
   return (
     <>
@@ -37,7 +39,6 @@ export default function PortfolioMain() {
             />
           ))}
       </div>
-      <BsMouse className="mousePortfolio" size="30px" color="white" />
     </>
   )
 }
