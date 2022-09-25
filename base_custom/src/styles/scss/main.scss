@@ -73,7 +73,7 @@ h2 {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 34px;
   margin-left: 40px;
   font-family: "Lato", sans-serif;
   font-weight: 800;
@@ -174,7 +174,6 @@ nav {
   justify-content: center;
   align-items: center;
   color: #ffe26a;
-
   margin-right: 130px;
   ul {
     display: flex;
@@ -899,11 +898,14 @@ span.under4 {
     font-size: 30px;
   }
   .logo {
-    font-size: 20px;
+    font-size: 34px;
     margin-left: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+  nav {
+    margin-right: 30px;
   }
   .logo:hover {
   
