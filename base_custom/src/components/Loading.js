@@ -14,16 +14,16 @@ const loadingCircle = {
   width: '2rem',
   height: '2rem',
   margin: '30px',
-  backgroundColor: '#ed0b70',
-  borderRadius: '1rem',
+  backgroundColor: '#fcfcfc',
+  borderRadius: '2px',
 }
 const loadingCircle3 = {
   display: 'block',
   width: '2rem',
   height: '2rem',
   margin: '30px',
-  backgroundColor: '#482673',
-  borderRadius: '1rem',
+  backgroundColor: '#2d2d2d',
+  borderRadius: '2px',
 }
 const loadingCircle2 = {
   display: 'block',
@@ -31,7 +31,7 @@ const loadingCircle2 = {
   height: '2rem',
   margin: '30px',
   backgroundColor: '#FFE26A',
-  borderRadius: '1rem',
+  borderRadius: '2px',
 }
 
 const loadingContainerVariants = {
