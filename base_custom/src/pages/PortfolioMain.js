@@ -19,21 +19,21 @@ export default function PortfolioMain() {
   }, [])
 
   return (
-      <div className="portfoliosMain">
-        {portfoliosMain &&
-          portfoliosMain?.map((portfolio) => (
-            <CardMain
-              key={portfolio.id}
-              title={portfolio.title}
-              ingress={portfolio.ingress}
-              live={portfolio.live}
-              reddit={portfolio.reddit}
-              slug={portfolio.portfoliosSlug}
-              kategorier={portfolio.kategoriSet}
-              imageUrl={portfolio.imageUrl}
-              colorcode={portfolio.colorcode}
-            />
-          ))}
-      </div>
+    <div className="portfoliosMain">
+      {portfoliosMain &&
+        portfoliosMain?.map((portfolio) => (
+          <CardMain
+            key={portfolio.id}
+            title={portfolio.title}
+            ingress={portfolio.ingress}
+            live={portfolio.live}
+            reddit={portfolio.reddit}
+            slug={portfolio.portfoliosSlug}
+            kategorier={portfolio.kategoriSet}
+            imageUrl={portfolio.imageUrl}
+            colorcode={portfolio.colorcode}
+          />
+        ))}
+    </div>
   )
 }
