@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import CardMain from '../components/CardMain'
 import { getPortfoliosMain } from '../lib/services/eventService'
 
-
 export default function PortfolioMain() {
   const [portfoliosMain, setPortfoliosMain] = useState('')
 
@@ -19,10 +18,7 @@ export default function PortfolioMain() {
     }
   }, [])
 
-
-
   return (
-    <>
       <div className="portfoliosMain">
         {portfoliosMain &&
           portfoliosMain?.map((portfolio) => (
@@ -39,6 +35,5 @@ export default function PortfolioMain() {
             />
           ))}
       </div>
-    </>
   )
 }
