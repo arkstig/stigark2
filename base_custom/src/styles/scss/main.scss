@@ -19,7 +19,7 @@ body {
 .switch {
   background-color: #ed0b70;
   position: fixed;
-  top: 4vh;
+  top: 32.5px;
   right: 30px;
   border-radius: 2px;
   filter: drop-shadow(0px 3px 6px #00000045);
@@ -753,7 +753,7 @@ span.under4 {
     align-content: stretch;
   }
   .switch {
-    right: 110px;
+    right: 30px;
   }
   .home {
     width: 100%;
@@ -764,7 +764,7 @@ span.under4 {
   /*HAMBURGER MENY*/
   .hamburger {
     position: absolute;
-    right: 5%;
+    right: 120px;
     cursor: pointer;
     display: block;
   }
@@ -838,10 +838,7 @@ span.under4 {
     width: 100%;
   }
 
-  .switch {
-    right: 80px;
-    margin-top: 0.3vh;
-  }
+ 
 
   .social {
     display: flex;
@@ -922,4 +919,16 @@ span.under4 {
     gap: 10px;
 
   }
+}
+
+
+@media only screen and (max-width: 400px) {
+
+.switch {
+  right: 10px;
+}
+
+.hamburger {
+  right: 90px;
+}
 }

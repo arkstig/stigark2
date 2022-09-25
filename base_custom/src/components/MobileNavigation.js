@@ -8,7 +8,7 @@ export default function MobileNavigation() {
   const hamburgerIcon = (
     <AiOutlineMenu
       className="hamburger"
-      size="30px"
+      size="42px"
       color="white"
       onClick={() => setOpen(!open)}
     />
@@ -17,7 +17,7 @@ export default function MobileNavigation() {
   const closeIcon = (
     <AiOutlineClose
       className="hamburger"
-      size="30px"
+      size="42px"
       color="white"
       onClick={() => setOpen(!open)}
     />
