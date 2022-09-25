@@ -42,9 +42,9 @@ export default function App() {
               onColor="#111111"
               offHandleColor="#111111"
               onHandleColor="#F6F6F6"
-              handleDiameter={36}
-              height={40}
-              width={70}
+              handleDiameter={26}
+              height={30}
+              width={55}
               borderRadius={2}
               activeBoxShadow="0px 0px 1px 2px #fffc35"
               uncheckedIcon={
@@ -54,7 +54,7 @@ export default function App() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '100%',
-                    fontSize: 20,
+                    fontSize: 15,
                     color: '#111111',
                     paddingRight: 2,
                   }}
@@ -69,7 +69,7 @@ export default function App() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '100%',
-                    fontSize: 20,
+                    fontSize: 15,
                     color: '#ffffff',
                   }}
                 >
@@ -83,7 +83,7 @@ export default function App() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '100%',
-                    fontSize: 18,
+                    fontSize: 13,
                     color: '#FFE26A',
                   }}
                 >
@@ -98,7 +98,7 @@ export default function App() {
                     alignItems: 'center',
                     height: '100%',
                     color: '#FFE26A',
-                    fontSize: 18,
+                    fontSize: 13,
                   }}
                 >
                   <RiSunFill />
