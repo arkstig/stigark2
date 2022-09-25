@@ -9,7 +9,6 @@ export default function MobileNavigation() {
     <AiOutlineMenu
       className="hamburger"
       size="42px"
-      color="white"
       onClick={() => setOpen(!open)}
     />
   )
@@ -18,7 +17,6 @@ export default function MobileNavigation() {
     <AiOutlineClose
       className="hamburger"
       size="42px"
-      color="white"
       onClick={() => setOpen(!open)}
     />
   )

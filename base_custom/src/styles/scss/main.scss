@@ -672,8 +672,11 @@ main .ommeg {
     right: 120px;
     cursor: pointer;
     display: block;
+    color: white;
   }
-
+ #light .hamburger {
+  color:#000000;
+ }
   .navigasjon-mobile ul {
     display: flex;
     flex-direction: column;
@@ -688,6 +691,10 @@ main .ommeg {
     border-bottom-right-radius: 2px;
     width: 100%;
     background-color: #1a1a1a;
+  }
+
+  #light .navigasjon-mobile ul {
+    background-color: #e7e7e7;
   }
 
   .navigasjon {
