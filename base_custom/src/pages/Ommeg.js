@@ -2,7 +2,7 @@ export default function Ommeg() {
   return (
     <article className="home">
       <p className="ingress">Om meg</p>
-      <h1>Stig Ark.</h1>
+      <h2>Stig Ark.</h2>
 
       <p>
         Jeg er en front-end utvikler/designer med fokus på brukeropplevelse, god

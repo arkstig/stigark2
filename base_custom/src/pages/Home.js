@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <div className="gridHome">
       <article className="home">
+        <p className="ingress">Hjem</p>
         <h2>Jeg utvikler og designer digitale produkter.</h2>
       </article>
       <div className="portfolios">

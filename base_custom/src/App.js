@@ -28,7 +28,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 4000)
+    setTimeout(() => setLoading(false), 3000)
   }, [])
 
   return (
@@ -84,7 +84,7 @@ export default function App() {
                     alignItems: 'center',
                     height: '100%',
                     fontSize: 13,
-                    color: '#FFE26A',
+                    color: '#ffffff',
                   }}
                 >
                   <RiMoonFill />
@@ -97,7 +97,7 @@ export default function App() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '100%',
-                    color: '#FFE26A',
+                    color: '#111111',
                     fontSize: 13,
                   }}
                 >

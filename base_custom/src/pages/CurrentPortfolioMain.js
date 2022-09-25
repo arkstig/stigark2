@@ -37,7 +37,7 @@ export default function CurrentPortfolioMain() {
             </NavLink>
           </div>
           <p className="ingress">Case study</p>
-          <h1>{portfolioMain?.title}</h1>
+          <h2>{portfolioMain?.title}</h2>
           <div
             className="bildecs"
             style={{
