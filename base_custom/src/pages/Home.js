@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react'
-
+import Loading from '../components/Loading'
 import Card from '../components/Card'
 
 import { getPortfolios } from '../lib/services/eventService'
 
 export default function Home() {
   const [portfolios, setPortfolios] = useState('')
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     try {
       const getPortfoliosData = async () => {
+        setLoading(false)
         const data = await getPortfolios()
         setPortfolios(data)
+        setLoading(true)
       }
       getPortfoliosData()
     } catch (error) {
@@ -19,7 +22,7 @@ export default function Home() {
       throw new Error(error)
     }
   }, [])
-  return (
+  return loading === false ? (
     <div className="gridHome">
       <article className="home">
         <p className="ingress">Hjem</p>
@@ -41,5 +44,7 @@ export default function Home() {
           ))}
       </div>
     </div>
+  ) : (
+    <Loading />
   )
 }
