@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react'
 import CardMain from '../components/CardMain'
 import { getPortfoliosMain } from '../lib/services/eventService'
-import Loading from '../components/Loading'
 
 export default function PortfolioMain() {
   const [portfoliosMain, setPortfoliosMain] = useState('')
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     try {
       const getPortfoliosMainData = async () => {
-        setLoading(false)
         const data = await getPortfoliosMain()
         setPortfoliosMain(data)
-        setLoading(true)
       }
       getPortfoliosMainData()
     } catch (error) {
@@ -22,7 +18,7 @@ export default function PortfolioMain() {
     }
   }, [])
 
-  return loading === true ? (
+  return (
     <>
       <article className="home">
         <p className="ingress">Arbeid</p>
@@ -45,8 +41,5 @@ export default function PortfolioMain() {
           ))}
       </div>
     </>
-    ) : (
-      <Loading />
-    )
   )
 }
