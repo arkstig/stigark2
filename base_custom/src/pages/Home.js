@@ -22,7 +22,7 @@ export default function Home() {
       throw new Error(error)
     }
   }, [])
-  return loading === false ? (
+  return loading === true ? (
     <div className="gridHome">
       <article className="home">
         <p className="ingress">Hjem</p>
