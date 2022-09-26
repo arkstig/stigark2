@@ -1,5 +1,4 @@
 @import "reset.scss";
-
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
@@ -16,27 +15,8 @@ body {
   height: 100%;
 }
 
-.switch {
-  background-color: #ed0b70;
-  position: fixed;
-  bottom: 20px;
-  right: 40px;
-  border-radius: 2px;
-  filter: drop-shadow(0px 3px 6px #00000045);
-  z-index: 1000;
-}
+/* ALL TEXT AND HEADINGS */
 
-#light .switch{
-  filter: drop-shadow(0px 3px 6px #00000005);
-}
-
-#light body {
-  background-color: #F6F6F6;
-}
-#light {
-  background-color: #F6F6F6;
-  color: #111111;
-}
 a {
   all: unset;
   cursor: pointer;
@@ -60,9 +40,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-#light h1 {
-  color: #ed0b70;
-}
 h2 {
   line-height: 1;
   font-weight: 400;
@@ -76,7 +53,78 @@ h2 {
   margin: 0px;
   color: #ffe26a;
 }
+
+/* SWTICH FROM DARK TO LIGHT */
+
+.switch {
+  background-color: #ed0b70;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  border-radius: 2px;
+  filter: drop-shadow(0px 3px 6px #00000045);
+  z-index: 1000;
+}
+
+/* EVERYTHING THAT IS USED ON LIGHT THEME*/
+#light body {
+  background-color: #f6f6f6;
+}
+#light {
+  background-color: #f6f6f6;
+  color: #111111;
+}
+#light h1 {
+  color: #ed0b70;
+}
 #light .ingress {
+  color: #ed0b70;
+}
+#light .switch {
+  filter: drop-shadow(0px 3px 6px #00000005);
+}
+#light .logo {
+  color: #111111;
+}
+#light .logo:hover {
+  color: #ed0b70;
+}
+#light aside {
+  background-color: #ffffff;
+  filter: drop-shadow(0px 3px 6px #0000000a);
+}
+
+#light .fa-brands {
+  color: #3a3a3a;
+}
+
+#light .fa-solid {
+  color: #3a3a3a;
+}
+
+#light header {
+  background-color: #ffffff;
+}
+
+#light nav ul li {
+  color: #111111;
+  font-weight: 300;
+}
+
+#light nav ul li:hover {
+  color: #ed0b70;
+  transition: all 0.2s;
+}
+
+#light button {
+  background: rgb(252, 252, 252);
+  color: #16123f;
+  padding-bottom: 8px;
+  background-color: #f6f6f6;
+  filter: drop-shadow(0px 0px 3px #00000015);
+}
+
+#light button:hover {
   color: #ed0b70;
 }
 
@@ -86,23 +134,13 @@ h2 {
   font-family: "Lato", sans-serif;
   font-weight: 800;
   color: #ffe26a;
-
 }
-
-#light .logo {
-  color: #111111;
-}
-#light .logo:hover {
-  color: #ed0b70;
-
-}
-
 .logo:hover {
-
   color: #ed0b70;
   transition: all 0.2s;
 }
 
+/* ALL THE CSS FOR THE ASIDE SECTION/SOCIAL MEDIA*/
 aside {
   background-color: #111111;
   position: fixed;
@@ -114,10 +152,6 @@ aside {
   filter: drop-shadow(0px 3px 6px #00000045);
 }
 
-#light aside {
-  background-color: #ffffff;
-  filter: drop-shadow(0px 3px 6px #0000000a);
-}
 aside ul {
   list-style-type: none;
   overflow: visible;
@@ -129,13 +163,7 @@ aside ul li {
 .fa-solid {
   color: #fcfcfc;
 }
-#light .fa-brands {
-  color: #3a3a3a;
-}
 
-#light .fa-solid {
-  color: #3a3a3a;
-}
 .fa-brands {
   color: #fcfcfc;
 }
@@ -150,6 +178,7 @@ aside ul li {
   color: #ed0b70;
   transform: rotate3d(1, 1, 1, 45deg);
 }
+/* ALL THE CSS FOR THE HEADER AND NAV*/
 
 header {
   display: flex;
@@ -165,17 +194,8 @@ header {
   z-index: 100;
 }
 
-#light header {
-  background-color: #ffffff;
-}
-
 header.header-bar--hidden {
   transform: translateY(-100%);
-}
-
-#light nav ul li {
-  color: #111111;
-  font-weight: 300;
 }
 
 nav {
@@ -201,10 +221,10 @@ nav {
   }
 }
 
-#light nav ul li:hover {
-  color: #ed0b70;
-  transition: all 0.2s;
+.hamburger {
+  display: none;
 }
+/* ALL THE CSS FOR THE MAIN SECTION*/
 
 main {
   display: flex;
@@ -213,6 +233,13 @@ main {
   align-items: center;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 100%;
+}
+/* ALL THE CSS FOR THE FOOTER SECTION*/
 footer {
   width: 100%;
   display: flex;
@@ -227,45 +254,9 @@ footer {
 
 .footer2 {
   padding-top: 26px;
-
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  width: 100%;
-}
-
-.cv {
-  background: rgb(237, 11, 112);
-  background: linear-gradient(180deg, rgba(237, 11, 112, 0.33) 0%, rgba(72, 38, 115, 0.57) 100%);
-  border-radius: 50px;
-  padding: 15px 30px;
-  color: white;
-  font-weight: 400;
-  filter: drop-shadow(0px 0px 6px #00000045);
-}
-
-#light .cv {
-  background: rgb(252, 252, 252);
-  color: #16123f;
-  padding-bottom: 13px;
-  filter: drop-shadow(0px 0px 6px #00000015);
-
-  background: linear-gradient(176deg, rgba(252, 252, 252, 1) 0%, rgba(255, 240, 178, 1) 100%);
-}
-
-.cv:hover {
-  transition: all 0.2s;
-  color: #ed0b70;
-  filter: drop-shadow(0px 0px 0px #00000045);
-}
-
-#light .cv:hover {
-  transition: all 0.2s;
-  color: #ed0b70;
-}
+/* ALL THE CSS FOR THE FOOTER SECTION*/
 
 button {
   background: #f6f6f6;
@@ -282,17 +273,6 @@ button {
   cursor: pointer;
 }
 
-#light button {
-  background: rgb(252, 252, 252);
-  color: #16123f;
-  padding-bottom: 8px;
-  background-color: #F6F6F6;
-  filter: drop-shadow(0px 0px 3px #00000015);
-}
-
-#light button:hover {
-  color: #ed0b70;
-}
 button:hover {
   transition: all 0.2s;
   color: #ed0b70;
@@ -346,10 +326,6 @@ button:hover {
   padding-left: 8%;
 }
 
-#light .informasjon {
-  background-color: #F1F1F1;
-}
-
 .bilde {
   width: 50%;
 
@@ -359,7 +335,6 @@ button:hover {
   background-size: cover;
   opacity: 0.6;
 }
-
 
 .portfolios article ul {
   background-color: #2d2d2d;
@@ -374,29 +349,30 @@ button:hover {
   border-radius: 2px;
 }
 
-#light .portfolios article ul {
-  background-color: #ffffff;
-  color: #ed0b70;
-}
-
-#light .circle {
-  background-color: #ed0b70;
-  margin-bottom: 3px;
-}
-.lineUp {
-  display: flex;
-  align-items: center;
-}
 .portfolios article ul li {
   display: inline;
 }
-
 .buttons {
   display: flex;
   justify-content: space-between;
 }
 
-/* HER KOMMER FOR PORTEFØLJE SIDE 2, EGEN CSS */
+.lineUp {
+  display: flex;
+  align-items: center;
+}
+
+/* ALL LIGHT MODE FOR THE PORTFOLIO */
+#light .informasjon {
+  background-color: #f1f1f1;
+}
+
+#light .portfolios article ul {
+  background-color: #ffffff;
+  color: #ed0b70;
+}
+
+/* HERE IS THE CSS FOR THE PORTFOLIO CHOSEN SITE */
 .mouseClassList {
   position: fixed;
   bottom: 4%;
@@ -418,7 +394,6 @@ button:hover {
   flex-direction: row;
   width: 50%;
   justify-content: center;
-  
 }
 .bgPortfolio {
   width: 90%;
@@ -431,7 +406,6 @@ button:hover {
 .bgPortfolio:hover + .informasjonMain {
   display: flex;
 }
-
 
 .informasjonMain {
   display: flex;
@@ -469,18 +443,12 @@ button:hover {
   align-items: flex-end;
 }
 
-
 .portfoliosMain article ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 20px;
   color: #ed0b70;
-}
-
-#light article ul {
-  background-color: #fff1b7;
-  color: #120e37;
 }
 
 .lineUp {
@@ -491,27 +459,14 @@ button:hover {
   display: inline;
 }
 
-.www,
-.github {
-  width: 60px;
-  height: 60px;
-  padding: 0;
-  margin-left: 20px;
-}
+/* ALL LIGHT MODE FOR THE PORTFOLIO MAIN SITE */
 
-#light .www {
-  padding-top: 12px;
-}
-#light .github {
-  padding-top: 12px;
-}
-.buttons {
-  display: flex;
-  justify-content: space-between;
+#light article ul {
+  background-color: #fff1b7;
+  color: #120e37;
 }
 
 /* HER KOMMER KONTAKT SIDEN - EGEN CSS */
-
 main .kontakt {
   height: 90vh;
   width: 100vw;
@@ -519,12 +474,9 @@ main .kontakt {
   margin-left: 40px;
   align-self: flex-start;
 }
-
+/* HER KOMMER OM MEG SIDEN - EGEN CSS */
 main .ommeg {
-  height: 90vh;
-  width: 100vw;
-  margin-top: 10vh;
-  margin-left: 40px;
+  height: 88vh;
   align-self: flex-start;
 }
 
@@ -537,11 +489,13 @@ main .ommeg {
   color: #ed0b70;
 }
 
+.kontaktinfo {
+  height: 78vh;
+}
 
-/* HER KOMMER CSS FOR CASE STUDY SIDEN */
+/* ALL THE CSS FOR THE CASE STUDY SITE */
 .bildecs {
   width: 100%;
-
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 900px; /* You must set a specified height */
   background-position: center; /* Center the image */
@@ -578,13 +532,6 @@ main .ommeg {
   color: #ffe26a;
 }
 
-#light .tilbake p {
-  color: #16123f;
-}
-#light .tilbake p:hover {
-  color: #ed0b70;
-}
-
 .tilbake p:hover {
   color: #ed0b70;
   transition: all 0.2s;
@@ -592,6 +539,14 @@ main .ommeg {
 
 .fa-arrow-left-long {
   margin-right: 10px;
+}
+/* ALL THE CSS FOR THE CASE STUDY LIGHT SITE */
+
+#light .tilbake p {
+  color: #16123f;
+}
+#light .tilbake p:hover {
+  color: #ed0b70;
 }
 
 /* Loading CSS*/
@@ -604,31 +559,30 @@ main .ommeg {
 }
 
 /*SCROLL BAR*/
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f6f6f6;
 }
-
+#light::-webkit-scrollbar-track {
+  background: #000000;
+}
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #000000;
 }
-
+#light::-webkit-scrollbar-thumb {
+  background: f6f6f6;
+}
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.hamburger {
-  display: none;
-}
 
-/*MEDIA QUERIES*/
+/*MEDIA QUERIES*/ /*MEDIA QUERIES*/ /*MEDIA QUERIES*/
 @media only screen and (max-width: 1150px) {
   .informasjon {
     padding: 2vw 2vh;
@@ -641,12 +595,12 @@ main .ommeg {
 }
 @media only screen and (max-width: 920px) {
   .informasjonMainMobile {
-    display:flex;
+    display: flex;
   }
-  .informasjonMain { 
+  .informasjonMain {
     display: none;
   }
-  
+
   .gridHome {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -661,7 +615,7 @@ main .ommeg {
   main {
     align-content: stretch;
   }
- 
+
   .home {
     width: 100%;
   }
@@ -676,9 +630,9 @@ main .ommeg {
     display: block;
     color: white;
   }
- #light .hamburger {
-  color:#000000;
- }
+  #light .hamburger {
+    color: #000000;
+  }
   .navigasjon-mobile ul {
     display: flex;
     flex-direction: column;
@@ -726,14 +680,11 @@ main .ommeg {
     padding-left: 0;
     row-gap: 60px;
     margin-top: 70px;
-     article {
-     
+    article {
+      padding-right: 0px;
+      padding-left: 0px;
       width: 100%;
-     
-      
-    
     }
-  
   }
   .informasjonMain {
     margin: 0;
@@ -752,14 +703,16 @@ main .ommeg {
     width: 100%;
   }
 
-  p{
+  p {
     max-width: 20rem;
   }
+
   .social {
     display: flex;
     column-gap: 25px;
     width: 100%;
-    justify-content: center;
+    padding-left: 35px;
+    justify-content: flex-start;
   }
 
   .portfolios {
@@ -820,7 +773,6 @@ main .ommeg {
     margin-right: 30px;
   }
   .logo:hover {
-  
     color: #ffe26a;
     transition: all 0.2s;
   }
@@ -832,14 +784,19 @@ main .ommeg {
   .portfoliosMain article ul {
     flex-direction: column;
     gap: 10px;
-
+  }
+  .portfoliosMain article {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
-
 @media only screen and (max-width: 400px) {
-
-.hamburger {
-  right: 40px;
-}
+  .hamburger {
+    right: 40px;
+  }
+  .portfoliosMain article {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

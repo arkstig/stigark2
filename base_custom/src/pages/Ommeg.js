@@ -1,6 +1,6 @@
 export default function Ommeg() {
   return (
-    <article className="home">
+    <article className="home ommeg">
       <p className="ingress">Om meg</p>
       <h2>Stig Ark.</h2>
 
