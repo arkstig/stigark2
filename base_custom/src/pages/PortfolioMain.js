@@ -22,9 +22,7 @@ export default function PortfolioMain() {
     }
   }, [])
 
-  if (!portfoliosMain && loading) return <Loading />
-
-  return (
+  return loading === true ? (
     <>
       <article className="home">
         <p className="ingress">Arbeid</p>
@@ -47,5 +45,8 @@ export default function PortfolioMain() {
           ))}
       </div>
     </>
+    ) : (
+      <Loading />
+    )
   )
 }
