@@ -287,7 +287,7 @@ button:hover {
   grid-template-columns: 50vw 49vw;
   grid-template-rows: 44vh 44vh;
 }
-/* HER KOMMER FOR UTVALGT PORTEFØLJE SIDEN, EGEN CSS */
+/* HER KOMMER FOR UTVALGT PORTFOLIO SIDEN, EGEN CSS */
 
 .portfolios {
   display: flex;
@@ -372,7 +372,7 @@ button:hover {
   color: #ed0b70;
 }
 
-/* HERE IS THE CSS FOR THE PORTFOLIO CHOSEN SITE */
+/* HERE IS THE CSS FOR THE PORTFOLIO MAIN SITE */
 .mouseClassList {
   position: fixed;
   bottom: 4%;
@@ -464,6 +464,25 @@ button:hover {
 #light article ul {
   background-color: #fff1b7;
   color: #120e37;
+}
+
+
+#light .portfoliosMain article ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+  background-color: none;
+  color: #ed0b70;
+  background-color: #ffffff00;
+}
+
+#light .informasjonMain {
+  background-color: rgba(255, 255, 255, 0.753);
+}
+
+#light .informasjonMainMobile {
+  background-color: rgba(255, 255, 255, 0.753);
 }
 
 /* HER KOMMER KONTAKT SIDEN - EGEN CSS */
