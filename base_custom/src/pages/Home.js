@@ -7,14 +7,11 @@ import { getPortfolios } from '../lib/services/eventService'
 export default function Home() {
   const [portfolios, setPortfolios] = useState('')
 
-
   useEffect(() => {
     try {
       const getPortfoliosData = async () => {
-       
         const data = await getPortfolios()
         setPortfolios(data)
-  
       }
       getPortfoliosData()
     } catch (error) {
@@ -41,9 +38,8 @@ export default function Home() {
               kategorier={portfolio.kategoriSet}
               imageUrl={portfolio.imageUrl}
             />
-        
+          ))}
       </div>
     </div>
-
   )
 }
