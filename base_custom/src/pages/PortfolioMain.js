@@ -26,7 +26,6 @@ export default function PortfolioMain() {
 
   return (
     <>
-      s
       <article className="home">
         <p className="ingress">Arbeid</p>
         <h2>Litt av mitt nyeste arbeid og student prosjekter.</h2>
