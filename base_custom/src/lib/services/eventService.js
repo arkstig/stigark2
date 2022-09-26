@@ -16,29 +16,53 @@ const eventFields = `
 
 `
 export const getPortfolios = async () => {
-  const data = await client.fetch(`*[_type == "portfolio"]{${eventFields}}`)
-  return data
+  try {
+    const data = await client.fetch(`*[_type == "portfolio"]{${eventFields}}`)
+    return data
+  } catch (error) {
+    // Sender feilmelding tilbake om noe går galt
+    throw new Error(error)
+  }
 }
+
 export const getPortfolio = async (slug) => {
-  const data = await client.fetch(
-    `*[_type == "portfolio" && slug.current == $slug]{${eventFields}}`,
-    { slug }
-  )
-  // Returnerer kun første element hvis data finnes
-  // Dette for å unngå å håndtere en liste i Event siden
-  return data?.[0]
+  try {
+    const data = await client.fetch(
+      `*[_type == "portfolio" && slug.current == $slug]{${eventFields}}`,
+      { slug }
+    )
+    // Returnerer kun første element hvis data finnes
+    // Dette for å unngå å håndtere en liste i Event siden
+    return data?.[0]
+  } catch (error) {
+    // Sender feilmelding tilbake om noe går galt
+    throw new Error(error)
+  }
 }
 
 export const getPortfoliosMain = async () => {
-  const data = await client.fetch(`*[_type == "portfolioMain"]{${eventFields}}`)
-  return data
+  try {
+    const data = await client.fetch(
+      `*[_type == "portfolioMain"]{${eventFields}}`
+    )
+    return data
+  } catch (error) {
+    // Sender feilmelding tilbake om noe går galt
+    throw new Error(error)
+  }
 }
+
 export const getPortfolioMain = async (slug) => {
-  const data = await client.fetch(
-    `*[_type == "portfolioMain" && slug.current == $slug]{${eventFields}}`,
-    { slug }
-  )
-  // Returnerer kun første element hvis data finnes
-  // Dette for å unngå å håndtere en liste i Event siden
-  return data?.[0]
+  try {
+    const data = await client.fetch(
+      `*[_type == "portfolioMain" && slug.current == $slug]{${eventFields}}`,
+      { slug }
+    )
+    // Returnerer kun første element hvis data finnes
+    // Dette for å unngå å håndtere en liste i Event siden
+    return data?.[0]
+  } catch (error) {
+    // Sender feilmelding tilbake om noe går galt
+    throw new Error(error)
+  }
 }

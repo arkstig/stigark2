@@ -11,24 +11,24 @@ const loadingContainer = {
 
 const loadingCircle = {
   display: 'block',
-  width: '2rem',
-  height: '2rem',
+  width: '1rem',
+  height: '1rem',
   margin: '30px',
   backgroundColor: '#fcfcfc',
   borderRadius: '2px',
 }
 const loadingCircle3 = {
   display: 'block',
-  width: '2rem',
-  height: '2rem',
+  width: '1rem',
+  height: '1rem',
   margin: '30px',
   backgroundColor: '#2d2d2d',
   borderRadius: '2px',
 }
 const loadingCircle2 = {
   display: 'block',
-  width: '2rem',
-  height: '2rem',
+  width: '1rem',
+  height: '1rem',
   margin: '30px',
   backgroundColor: '#FFE26A',
   borderRadius: '2px',

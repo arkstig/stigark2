@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ReactSwitch from 'react-switch'
 import { RiSunLine, RiSunFill, RiMoonFill, RiMoonLine } from 'react-icons/ri'
@@ -16,7 +16,6 @@ import Portfolio from './pages/Portfolio'
 import PortfolioMain from './pages/PortfolioMain'
 import CurrentPortfolioMain from './pages/CurrentPortfolioMain'
 
-export const ThemeContext = createContext(null)
 export default function App() {
   // Write JavaScript, use Hooks, add state and more
   const [theme, setTheme] = useState('dark')
@@ -32,7 +31,8 @@ export default function App() {
   }, [])
 
   return (
-    <ThemeContext.Provider>
+    <>
+      {' '}
       {loading === false ? (
         <div id={theme}>
           <Navigation />
@@ -132,6 +132,6 @@ export default function App() {
       ) : (
         <Loading />
       )}
-    </ThemeContext.Provider>
+    </>
   )
 }
