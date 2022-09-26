@@ -713,6 +713,12 @@ main .ommeg {
   }
 }
 
+/* CSS FOR THE LOADING CONTAINERS */
+
+.container, .container2 {
+  width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
   aside {
     bottom: 0%;
