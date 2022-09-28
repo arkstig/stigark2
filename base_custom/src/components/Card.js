@@ -8,7 +8,7 @@ export default function Card({ title, ingress, slug, kategorier, imageUrl }) {
     <article>
       <div className="informasjon">
         <p className="ingress">Utvalgt arbeid</p>
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         <p>{ingress}</p>
         <ul>
           {kategorier.map((kategori) => (

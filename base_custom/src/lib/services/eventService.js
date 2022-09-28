@@ -11,7 +11,9 @@ const eventFields = `
   reddit,
   live,
   'id': _id,
-  colorcode
+  ingress2,
+  kategorier,
+
 
 
 `

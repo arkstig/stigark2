@@ -30,7 +30,7 @@ export default function PortfolioMain() {
         <div className="container2">
           <article className="home">
             <p className="ingress">Arbeid</p>
-            <h2>Litt av mitt nyeste arbeid og student prosjekter.</h2>
+            <h1>Litt av mitt nyeste arbeid og student prosjekter.</h1>
           </article>
           <div className="portfoliosMain">
             {portfoliosMain &&

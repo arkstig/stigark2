@@ -24,7 +24,6 @@ export default function CurrentPortfolio() {
       throw new Error(error)
     }
   }, [slug])
-
   return (
     <div className="container">
       {loading ? (
@@ -44,8 +43,25 @@ export default function CurrentPortfolio() {
                   </p>
                 </NavLink>
               </div>
-              <p className="ingress">Case study</p>
-              <h1>{portfolio?.title}</h1>
+              <div className="containerArticleCasestudy">
+                <div>
+                  <p className="ingress">Case study</p>
+                  <h1>{portfolio?.title}</h1>
+                </div>
+                <div>
+                  <p className="rightAlign">{portfolio?.ingress2}</p>
+                  <ul className="emneListe">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Node</li>
+                    <li>React</li>
+                    <li>Sanity</li>
+                    <li>Github</li>
+                    <li>Prosjektarbeid</li>
+                  </ul>
+                </div>
+              </div>
               <div
                 className="bildecs"
                 style={{

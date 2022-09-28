@@ -33,7 +33,7 @@ export default function CardMain({
         >
           {isHovering && (
             <div className="informasjonMain">
-              <h2>{title}</h2>
+              <h1>{title}</h1>
               <p>{ingress}</p>
               <ul>
                 {kategorier.map((kategori) => (

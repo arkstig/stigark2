@@ -1,5 +1,5 @@
-@import "reset.scss";
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import 'reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Epilogue", sans-serif;
+  font-family: 'Epilogue', sans-serif;
   background-color: #000000;
   color: white;
   width: 100%;
@@ -25,25 +25,25 @@ p {
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
-  line-height: 2;
+  line-height: 1.8;
   max-width: 40rem;
 }
 h1,
 h2 {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 h1 {
-  font-weight: 900;
-  font-size: 70px;
-  margin-top: -10px;
-  color: #ffe26a;
-  margin-bottom: 10px;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 15px;
+  max-width: 40rem;
 }
 
 h2 {
   line-height: 1;
-  font-weight: 400;
-  font-size: 50px;
+  font-weight: 500;
+  font-size: 30px;
   margin-bottom: 15px;
   max-width: 40rem;
 }
@@ -66,6 +66,22 @@ h2 {
   z-index: 1000;
 }
 
+.emneListe {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+  background-color: #ed0b70;
+  padding: 10px;
+  li::before {
+    content: "• ";
+    color: #FFFFFF;
+  }
+}
+
+
 /* EVERYTHING THAT IS USED ON LIGHT THEME*/
 #light body {
   background-color: #f6f6f6;
@@ -75,7 +91,7 @@ h2 {
   color: #111111;
 }
 #light h1 {
-  color: #ed0b70;
+  color: #000000;
 }
 #light .ingress {
   color: #ed0b70;
@@ -131,7 +147,7 @@ h2 {
 .logo {
   font-size: 34px;
   margin-left: 40px;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 800;
   color: #ffe26a;
 }
@@ -301,7 +317,7 @@ button:hover {
   min-height: 100%;
 }
 
-.portfolios article h2 {
+.portfolios article h1 {
   font-size: 2.3rem;
   margin: 5px 0px;
 }
@@ -338,19 +354,21 @@ button:hover {
 
 .portfolios article ul {
   background-color: #2d2d2d;
-  padding: 10px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 18px;
   color: #ffe26a;
   font-size: 10px;
-  max-width: 12rem;
+  max-width: 14rem;
   border-radius: 2px;
+  flex-wrap: wrap;
+  line-height: 25px;
 }
 
 .portfolios article ul li {
-  display: inline;
+  display: flex;
 }
 .buttons {
   display: flex;
@@ -463,9 +481,7 @@ button:hover {
 
 #light article ul {
   background-color: #fff1b7;
-  color: #120e37;
 }
-
 
 #light .portfoliosMain article ul {
   display: flex;
@@ -497,6 +513,27 @@ main .kontakt {
 main .ommeg {
   height: 88vh;
   align-self: flex-start;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("img/ark3.png"); /* The image used */
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+   /* Resize the background image to cover the entire container */
+}
+
+#light main .ommeg {
+  height: 88vh;
+  align-self: flex-start;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("img/ark4.png"); /* The image used */
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+   /* Resize the background image to cover the entire container */
 }
 
 .mailto {
@@ -516,7 +553,7 @@ main .ommeg {
 .bildecs {
   width: 100%;
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 900px; /* You must set a specified height */
+  height: 700px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -528,17 +565,25 @@ main .ommeg {
 .casestudy {
   margin-top: 40px;
   margin-left: 20%;
-  width: 100vw;
 }
 
 .casestudy2 {
   margin-top: 100px;
-  margin-right: 30%;
+  margin-right: 20%;
   margin-bottom: 200px;
 }
-
+.containerArticleCasestudy {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20%;
+  justify-content: space-between;
+}
+.rightAlign {
+padding-right: 40px;
+}
 .ingress2 {
   font-weight: 600;
+  
 }
 
 .tilbake {
@@ -575,6 +620,8 @@ main .ommeg {
   width: 100vh;
   height: 100vh;
   display: flex;
+  position: absolute;
+  z-index: 50;
 }
 
 /*SCROLL BAR*/
@@ -715,7 +762,8 @@ main .ommeg {
 
 /* CSS FOR THE LOADING CONTAINERS */
 
-.container, .container2 {
+.container,
+.container2 {
   width: 100%;
 }
 
@@ -766,7 +814,7 @@ main .ommeg {
     width: 50%;
   }
 
-  .portfolios article h2 {
+  .portfolios article h1 {
     font-size: 1.5rem;
     margin: 5px 0px;
   }
@@ -784,7 +832,7 @@ main .ommeg {
   footer {
     margin-bottom: 68px;
   }
-  h2 {
+  h1 {
     font-size: 30px;
   }
   .logo {

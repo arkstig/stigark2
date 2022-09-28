@@ -29,6 +29,16 @@ const portfolio = {
       type: "text",
     },
     {
+      title: "Ingress2",
+      name: "ingress2",
+      type: "text",
+    },
+    {
+      title: "Kategorier",
+      name: "kategorier",
+      type: "text",
+    },
+    {
       title: "Text",
       name: "hovedinnhold",
       type: "array",

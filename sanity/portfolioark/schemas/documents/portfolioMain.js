@@ -1,4 +1,3 @@
-
 const portfolioMain = {
   title: "PortfolioMain",
   name: "portfolioMain",
@@ -27,6 +26,16 @@ const portfolioMain = {
     {
       title: "Ingress",
       name: "ingress",
+      type: "text",
+    },
+    {
+      title: "Ingress2",
+      name: "ingress2",
+      type: "text",
+    },
+    {
+      title: "Kategorier",
+      name: "kategorier",
       type: "text",
     },
     {

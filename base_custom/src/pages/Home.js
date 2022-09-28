@@ -29,7 +29,7 @@ export default function Home() {
         <div className="gridHome">
           <article className="home">
             <p className="ingress">Hjem</p>
-            <h2>Jeg utvikler og designer digitale produkter.</h2>
+            <h1>Jeg utvikler og designer digitale produkter.</h1>
           </article>
           <div className="portfolios">
             {portfolios &&

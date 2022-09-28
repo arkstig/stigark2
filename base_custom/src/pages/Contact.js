@@ -3,7 +3,7 @@ export default function Contact() {
     <div className="home">
       <div className="kontaktinfo">
         <p className="ingress">Kontakt</p>
-        <h2>Skal vi ta en prat?</h2>
+        <h1>Skal vi ta en prat?</h1>
         <p>
           Kontakt meg gjerne, enten ved å sende meg en e-post til
           <a
