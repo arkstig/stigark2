@@ -13,6 +13,11 @@ const eventFields = `
   'id': _id,
   ingress2,
   kategorier,
+  "imageUrl1": image1.asset->url,
+  "imageUrl2": image2.asset->url,
+  "imageUrl3": image3.asset->url,
+  "imageUrl4": image4.asset->url,
+  "imageUrl5": image5.asset->url,
 
 
 

@@ -44,6 +44,7 @@ export default function Home() {
                   slug={portfolio.portfoliosSlug}
                   kategorier={portfolio.kategoriSet}
                   imageUrl={portfolio.imageUrl}
+                  hovedinnhold={portfolio.hovedinnhold}
                 />
               ))}
           </div>

@@ -13,6 +13,38 @@ const portfolio = {
       },
     },
     {
+      title: "Image1",
+      name: "image1",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
+      title: "Image2",
+      name: "image2",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
+      title: "Image3",
+      name: "image3",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
+      title: "Image4",
+      name: "image4",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
       title: "Slug",
       name: "slug",
       type: "slug",
@@ -42,7 +74,29 @@ const portfolio = {
       title: "Text",
       name: "hovedinnhold",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+        },
+        {
+          type: "image",
+          fields: [
+            {
+              type: "text",
+              name: "alt",
+              title: "Alternative text",
+              description: `Some of your visitors cannot see images, 
+                be they blind, color-blind, low-sighted; 
+                alternative text is of great help for those 
+                people that can rely on it to have a good idea of 
+                what\'s on your page.`,
+              options: {
+                isHighlighted: true,
+              },
+            },
+          ],
+        },
+      ],
     },
     {
       title: "Kategorier",
