@@ -36,7 +36,6 @@ export default function Ommeg() {
         Javascript for å utivkle web applikasjoner. Og jeg gleder meg til å
         jobbe og fordype meg videre innen webutvikling og lat som hører til.
       </p>
-      <p>f</p>
 
       <button type="button">Se mitt arbeid!</button>
     </article>
