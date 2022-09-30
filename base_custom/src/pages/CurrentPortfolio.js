@@ -39,7 +39,7 @@ export default function CurrentPortfolio() {
                       icon={faArrowLeftLong}
                       className="fa-solid fa-arrow-left-long"
                     />{' '}
-                    Tilbake til porteføljen
+                    Tilbake til Arbeid
                   </p>
                 </NavLink>
               </div>
@@ -50,16 +50,7 @@ export default function CurrentPortfolio() {
                 </div>
                 <div>
                   <p className="rightAlign">{portfolio?.ingress2}</p>
-                  <ul className="emneListe">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Node</li>
-                    <li>React</li>
-                    <li>Sanity</li>
-                    <li>Github</li>
-                    <li>Prosjektarbeid</li>
-                  </ul>
+                  <span className="emneListe">{portfolio?.kategorier}</span>
                 </div>
               </div>
               <div

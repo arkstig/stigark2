@@ -30,6 +30,7 @@ export default function Home() {
           <article className="home">
             <p className="ingress">Hjem</p>
             <h1>Jeg utvikler og designer digitale produkter.</h1>
+            <p>Siden er under konstruksjon.</p>
           </article>
           <div className="portfolios">
             {portfolios &&

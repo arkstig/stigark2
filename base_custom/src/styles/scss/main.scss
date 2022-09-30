@@ -67,7 +67,6 @@ h2 {
 }
 
 .emneListe {
-  list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -75,10 +74,7 @@ h2 {
   font-size: 12px;
   background-color: #ed0b70;
   padding: 10px;
-  li::before {
-    content: "• ";
-    color: #FFFFFF;
-  }
+  font-style: italic;
 }
 
 
@@ -361,7 +357,7 @@ button:hover {
   column-gap: 18px;
   color: #ffe26a;
   font-size: 10px;
-  max-width: 14rem;
+  max-width: 90%;
   border-radius: 2px;
   flex-wrap: wrap;
   line-height: 25px;
