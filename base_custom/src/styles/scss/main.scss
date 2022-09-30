@@ -527,6 +527,10 @@ main .ommeg {
   border-radius: 2px;
 }
 
+#light .ommeg p {
+  background-color: #f6f6f6ac;
+}
+
 #light main .ommeg {
   height: 88vh;
   align-self: flex-start;
@@ -665,6 +669,16 @@ padding-right: 40px;
 }
 @media only screen and (max-width: 920px) {
   main .ommeg {
+    height: 100%;
+    align-self: flex-end;
+
+    background-position: bottom right; /* Center thimage */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+     /* Resize the background image to cover the entire container */
+  }
+
+  #light   main .ommeg {
     height: 100%;
     align-self: flex-end;
 
