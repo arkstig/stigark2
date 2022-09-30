@@ -1,13 +1,6 @@
 import ReactTooltip from 'react-tooltip'
 
-export default function Card({
-  title,
-  ingress,
-  slug,
-  kategorier,
-  imageUrl,
-  hovedinnhold,
-}) {
+export default function Card({ title, ingress, slug, kategorier, imageUrl }) {
   const path = `/portfolio/${slug}`
 
   console.log(slug)

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { useParams, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { PortableText } from '@portabletext/react'
 import { getPortfolioMain } from '../lib/services/eventService'
 import Loading from '../components/Loading'
 
@@ -56,6 +57,7 @@ export default function CurrentPortfolioMain() {
           </article>
 
           <article className="casestudy2">
+            <PortableText value={portfolioMain?.hovedinnhold} />
             <h2>Lorem ipsum</h2>
             <p className="ingress2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
@@ -73,7 +75,7 @@ export default function CurrentPortfolioMain() {
               velit, sed quia non numquam eius modi tempora incidunt ut labore
               et dolore magnam aliquam quaerat voluptatem.
             </p>
-            <img src={portfolioMain?.imageUrl1} alt="Lorem ipsum"></img>
+            <img src={portfolioMain?.imageUrl1} alt="Lorem ipsum" />
             <button type="button">Besøk siden!</button>
             <h2>Lorem ipsum</h2>
             <p className="ingress2">
@@ -92,7 +94,7 @@ export default function CurrentPortfolioMain() {
               velit, sed quia non numquam eius modi tempora incidunt ut labore
               et dolore magnam aliquam quaerat voluptatem.
             </p>
-            <img src={portfolioMain?.imageUrl2} alt="Lorem ipsum"></img>
+            <img src={portfolioMain?.imageUrl2} alt="Lorem ipsum" />
             <button type="button">Besøk siden!</button>
             <h2>Lorem ipsum</h2>
             <p className="ingress2">
@@ -111,7 +113,7 @@ export default function CurrentPortfolioMain() {
               velit, sed quia non numquam eius modi tempora incidunt ut labore
               et dolore magnam aliquam quaerat voluptatem.
             </p>
-            <img src={portfolioMain?.imageUrl3} alt="Lorem ipsum"></img>
+            <img src={portfolioMain?.imageUrl3} alt="Lorem ipsum" />
             <button type="button">Besøk siden!</button>
             <h2>Lorem ipsum</h2>
             <p className="ingress2">
@@ -130,7 +132,7 @@ export default function CurrentPortfolioMain() {
               velit, sed quia non numquam eius modi tempora incidunt ut labore
               et dolore magnam aliquam quaerat voluptatem.
             </p>
-            <img src={portfolioMain?.imageUrl4} alt="Lorem ipsum"></img>
+            <img src={portfolioMain?.imageUrl4} alt="Lorem ipsum" />
             <button type="button">Besøk siden!</button>
             <h2>Lorem ipsum</h2>
             <p className="ingress2">
@@ -149,7 +151,7 @@ export default function CurrentPortfolioMain() {
               velit, sed quia non numquam eius modi tempora incidunt ut labore
               et dolore magnam aliquam quaerat voluptatem.
             </p>
-            <img src={portfolioMain?.imageUrl5} alt="Lorem ipsum"></img>
+            <img src={portfolioMain?.imageUrl5} alt="Lorem ipsum" />
             <button type="button">Besøk siden!</button>
           </article>
         </div>
