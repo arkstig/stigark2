@@ -519,6 +519,14 @@ main .ommeg {
    /* Resize the background image to cover the entire container */
 }
 
+
+.ommeg p {
+  max-width: 60rem;
+  background-color: rgba(0, 0, 0, 0.509);
+  padding: 0;
+  border-radius: 2px;
+}
+
 #light main .ommeg {
   height: 88vh;
   align-self: flex-start;
@@ -656,6 +664,15 @@ padding-right: 40px;
   }
 }
 @media only screen and (max-width: 920px) {
+  main .ommeg {
+    height: 100%;
+    align-self: flex-end;
+
+    background-position: bottom right; /* Center thimage */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+     /* Resize the background image to cover the entire container */
+  }
   .informasjonMainMobile {
     display: flex;
   }
