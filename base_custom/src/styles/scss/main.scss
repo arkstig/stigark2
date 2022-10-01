@@ -530,6 +530,14 @@ main .ommeg {
   display: flex;
   justify-content: flex-start;
 }
+.ommeg a {
+  color: #ffe26a;
+  transition: all 0.2s;
+} 
+.ommeg a:hover {
+  color: #f1efe5;
+
+}
 .ommeg p {
   max-width: 60rem;
   background-color: rgba(0, 0, 0, 0.509);
@@ -607,14 +615,14 @@ padding-right: 50px;
  padding-left: 50px;
 }
 .casestudy2 a {
-  color: yellow;
+  color: #ffe26a;
   transition: all 0.2s;
 }
 .casestudy2 h2 {
   margin-top: 40px;
 }
 .casestudy2 a:hover {
-  color: #ed0b70;
+  color: #eaeaea;
 }
 
 
