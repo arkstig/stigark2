@@ -22,7 +22,7 @@ a {
   cursor: pointer;
 }
 p {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 10px;
   margin-bottom: 10px;
   line-height: 1.8;
@@ -319,7 +319,7 @@ button:hover {
 }
 
 .portfolios article p {
-  font-size: 0.7rem;
+  font-size: 14px;
   max-width: 16rem;
 }
 .portfolios article:nth-child(even) {
@@ -581,11 +581,39 @@ main .ommeg {
   margin-bottom: 200px;
 }
 
-.casestudy2 img {
+.casestudy ul {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.casestudy li {
+  margin-bottom: 5px;
+}
+
+.casestudy2 div{
+
+
+ margin-bottom: 50px;
+ padding-left: 50px;
+}
+.casestudy2 a {
+  color: yellow;
+  transition: all 0.2s;
+}
+.casestudy2 h2 {
+  margin-top: 40px;
+}
+.casestudy2 a:hover {
+  color: #ed0b70;
+}
+
+
+.casestudy2,  img {
   width: 100%;
 }
 .casestudy2 p {
   max-width: 100%;
+  margin-bottom: 5px;
 }
 .containerArticleCasestudy {
   display: flex;

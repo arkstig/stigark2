@@ -45,8 +45,16 @@ export default function CurrentPortfolioMain() {
                   </p>
                 </NavLink>
               </div>
-              <p className="ingress">Arbeid</p>
-              <h2>{portfolioMain?.title}</h2>
+              <div className="containerArticleCasestudy">
+                <div>
+                  <p className="ingress">Case study</p>
+                  <h1>{portfolioMain?.title}</h1>
+                </div>
+                <div>
+                  <p className="rightAlign">{portfolioMain?.ingress2}</p>
+                  <span className="emneListe">{portfolioMain?.kategorier}</span>
+                </div>
+              </div>
               <div
                 className="bildecs"
                 style={{
@@ -57,102 +65,45 @@ export default function CurrentPortfolioMain() {
           </article>
 
           <article className="casestudy2">
-            <PortableText value={portfolioMain?.hovedinnhold} />
-            <h2>Lorem ipsum</h2>
-            <p className="ingress2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
-            </p>
-            <img src={portfolioMain?.imageUrl1} alt="Lorem ipsum" />
-            <button type="button">Besøk siden!</button>
-            <h2>Lorem ipsum</h2>
-            <p className="ingress2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
-            </p>
-            <img src={portfolioMain?.imageUrl2} alt="Lorem ipsum" />
-            <button type="button">Besøk siden!</button>
-            <h2>Lorem ipsum</h2>
-            <p className="ingress2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
-            </p>
-            <img src={portfolioMain?.imageUrl3} alt="Lorem ipsum" />
-            <button type="button">Besøk siden!</button>
-            <h2>Lorem ipsum</h2>
-            <p className="ingress2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
-            </p>
-            <img src={portfolioMain?.imageUrl4} alt="Lorem ipsum" />
-            <button type="button">Besøk siden!</button>
-            <h2>Lorem ipsum</h2>
-            <p className="ingress2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
-            </p>
-            <img src={portfolioMain?.imageUrl5} alt="Lorem ipsum" />
-            <button type="button">Besøk siden!</button>
+            <img
+              src={portfolioMain?.imageUrl1}
+              alt={portfolioMain?.image1?.caption1}
+            />
+            <div>
+              <PortableText value={portfolioMain?.hovedinnhold} />
+            </div>
+
+            <img
+              alt={portfolioMain?.image2?.caption2}
+              src={portfolioMain?.imageUrl2}
+            />
+            <div>
+              <PortableText value={portfolioMain?.hovedinnhold2} />
+            </div>
+
+            <img
+              alt={portfolioMain?.image3?.caption3}
+              src={portfolioMain?.imageUrl3}
+            />
+            <div>
+              <PortableText value={portfolioMain?.hovedinnhold3} />
+            </div>
+
+            <img
+              alt={portfolioMain?.image4?.caption4}
+              src={portfolioMain?.imageUrl4}
+            />
+            <div>
+              <PortableText value={portfolioMain?.hovedinnhold4} />
+            </div>
+
+            <img
+              alt={portfolioMain?.image5?.caption5}
+              src={portfolioMain?.imageUrl5}
+            />
+            <div>
+              <PortableText value={portfolioMain?.hovedinnhold5} />
+            </div>
           </article>
         </div>
       )}

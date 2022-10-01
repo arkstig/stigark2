@@ -19,6 +19,22 @@ const portfolio = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image2",
@@ -27,6 +43,22 @@ const portfolio = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image3",
@@ -35,6 +67,22 @@ const portfolio = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image4",
@@ -43,6 +91,46 @@ const portfolio = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
+    },
+    {
+      title: "Image5",
+      name: "image5",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Slug",
@@ -71,30 +159,52 @@ const portfolio = {
       type: "text",
     },
     {
-      title: "Text",
+      title: "Richtext",
       name: "hovedinnhold",
       type: "array",
       of: [
         {
           type: "block",
         },
+      ],
+    },
+    {
+      title: "Richtext1",
+      name: "hovedinnhold2",
+      type: "array",
+      of: [
         {
-          type: "image",
-          fields: [
-            {
-              type: "text",
-              name: "alt",
-              title: "Alternative text",
-              description: `Some of your visitors cannot see images, 
-                be they blind, color-blind, low-sighted; 
-                alternative text is of great help for those 
-                people that can rely on it to have a good idea of 
-                what\'s on your page.`,
-              options: {
-                isHighlighted: true,
-              },
-            },
-          ],
+          type: "block",
+        },
+      ],
+    },
+    {
+      title: "Richtext2",
+      name: "hovedinnhold3",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
+      title: "Richtext3",
+      name: "hovedinnhold4",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
+      title: "Richtext4",
+      name: "hovedinnhold5",
+      type: "array",
+      of: [
+        {
+          type: "block",
         },
       ],
     },

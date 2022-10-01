@@ -7,6 +7,10 @@ const eventFields = `
   "imageUrl": portfolioimage.asset->url,
   'category': category->title,
   hovedinnhold,
+  hovedinnhold2,
+  hovedinnhold3,
+  hovedinnhold4,
+  hovedinnhold5,
   kategoriSet,
   reddit,
   live,
@@ -18,6 +22,7 @@ const eventFields = `
   "imageUrl3": image3.asset->url,
   "imageUrl4": image4.asset->url,
   "imageUrl5": image5.asset->url,
+  caption,
 
 
 

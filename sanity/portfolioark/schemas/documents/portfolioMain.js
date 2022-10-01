@@ -11,6 +11,22 @@ const portfolioMain = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image1",
@@ -19,6 +35,22 @@ const portfolioMain = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption1",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image2",
@@ -27,6 +59,22 @@ const portfolioMain = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption2",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image3",
@@ -35,6 +83,22 @@ const portfolioMain = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption3",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image4",
@@ -43,6 +107,22 @@ const portfolioMain = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption4",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Image5",
@@ -51,6 +131,22 @@ const portfolioMain = {
       options: {
         hotspot: true, // <-- Defaults to false
       },
+      fields: [
+        {
+          name: "caption5",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true, // <-- make this field easily accessible
+          },
+        },
+        {
+          // Editing this field will be hidden behind an "Edit"-button
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     },
     {
       title: "Slug",
@@ -84,30 +180,52 @@ const portfolioMain = {
       type: "text",
     },
     {
-      title: "Text",
+      title: "Richtext",
       name: "hovedinnhold",
       type: "array",
       of: [
         {
           type: "block",
         },
+      ],
+    },
+    {
+      title: "Richtext1",
+      name: "hovedinnhold2",
+      type: "array",
+      of: [
         {
-          type: "image",
-          fields: [
-            {
-              type: "text",
-              name: "alt",
-              title: "Alternative text",
-              description: `Some of your visitors cannot see images, 
-                be they blind, color-blind, low-sighted; 
-                alternative text is of great help for those 
-                people that can rely on it to have a good idea of 
-                what\'s on your page.`,
-              options: {
-                isHighlighted: true,
-              },
-            },
-          ],
+          type: "block",
+        },
+      ],
+    },
+    {
+      title: "Richtext2",
+      name: "hovedinnhold3",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
+      title: "Richtext3",
+      name: "hovedinnhold4",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
+      title: "Richtext4",
+      name: "hovedinnhold5",
+      type: "array",
+      of: [
+        {
+          type: "block",
         },
       ],
     },

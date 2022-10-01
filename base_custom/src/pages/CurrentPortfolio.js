@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { useParams, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { PortableText } from '@portabletext/react'
 import { getPortfolio } from '../lib/services/eventService'
 import Loading from '../components/Loading'
 
@@ -33,13 +34,13 @@ export default function CurrentPortfolio() {
           <article>
             <div className="informasjon4">
               <div className="tilbake">
-                <NavLink to="/portfolio">
+                <NavLink to="/portfolioMain">
                   <p>
                     <FontAwesomeIcon
                       icon={faArrowLeftLong}
                       className="fa-solid fa-arrow-left-long"
                     />{' '}
-                    Tilbake til Arbeid
+                    Tilbake til arbeid
                   </p>
                 </NavLink>
               </div>
@@ -63,23 +64,30 @@ export default function CurrentPortfolio() {
           </article>
 
           <article className="casestudy2">
-            <h2>Lorem ipsum</h2>
-            <p className="ingress2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elite sed do
-              eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
-              consectetur.
-            </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
-            </p>
+            <img src={portfolio?.imageUrl1} alt={portfolio?.image1?.caption1} />
+            <div>
+              <PortableText value={portfolio?.hovedinnhold} />
+            </div>
+
+            <img alt={portfolio?.image2?.caption2} src={portfolio?.imageUrl2} />
+            <div>
+              <PortableText value={portfolio?.hovedinnhold2} />
+            </div>
+
+            <img alt={portfolio?.image3?.caption3} src={portfolio?.imageUrl3} />
+            <div>
+              <PortableText value={portfolio?.hovedinnhold3} />
+            </div>
+
+            <img alt={portfolio?.image4?.caption4} src={portfolio?.imageUrl4} />
+            <div>
+              <PortableText value={portfolio?.hovedinnhold4} />
+            </div>
+
+            <img alt={portfolio?.image5?.caption5} src={portfolio?.imageUrl5} />
+            <div>
+              <PortableText value={portfolio?.hovedinnhold5} />
+            </div>
           </article>
         </div>
       )}
