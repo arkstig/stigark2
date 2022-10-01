@@ -373,7 +373,9 @@ button:hover {
 
 .lineUp {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 /* ALL LIGHT MODE FOR THE PORTFOLIO */
@@ -441,10 +443,17 @@ button:hover {
   padding-left: 10%;
   padding-right: 10%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #1a1a1aa4;
   width: 100%;
+  align-content: flex-start;
 }
+
+.informasjonMainMobile ul li{
+  text-align: left;
+}
+
+
 
 .bildeMain {
   width: 100%;
@@ -460,15 +469,12 @@ button:hover {
 .portfoliosMain article ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 20px;
   color: #ed0b70;
 }
 
-.lineUp {
-  display: flex;
-  align-items: center;
-}
+
 .portfolios article ul li {
   display: inline;
 }
@@ -728,6 +734,8 @@ padding-right: 40px;
   }
   .informasjonMainMobile {
     display: flex;
+    align-items: flex-start;
+    text-align: left;
   }
   .informasjonMain {
     display: none;
@@ -834,6 +842,25 @@ padding-right: 40px;
 }
 
 @media only screen and (max-width: 600px) {
+  .containerArticleCasestudy { 
+    flex-direction: column;
+  }
+  .casestudy {
+    margin-top: 40px;
+    margin-left: 10%;
+  }
+  .casestudy2 {
+    margin-top: 100px;
+    margin-right: 5%;
+    margin-bottom: 200px;
+  }
+  
+.casestudy2 div{
+  padding-right: 10px;
+  
+   margin-bottom: 50px;
+   padding-left: 0px;
+  }
   aside {
     bottom: 0%;
     left: 0%;
