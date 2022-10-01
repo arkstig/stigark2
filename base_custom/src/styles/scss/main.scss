@@ -77,6 +77,10 @@ h2 {
   font-style: italic;
 }
 
+#light .emneListe {
+  background-color: white;
+}
+
 
 /* EVERYTHING THAT IS USED ON LIGHT THEME*/
 #light body {
@@ -617,6 +621,15 @@ padding-right: 50px;
 .casestudy2 a {
   color: #ffe26a;
   transition: all 0.2s;
+}
+
+#light .casestudy2 a {
+  color: #ed0b70;
+  transition: all 0.2s;
+}
+
+#light .casestudy2 ul {
+  background-color: rgba(0, 0, 0, 0);
 }
 .casestudy2 h2 {
   margin-top: 40px;
