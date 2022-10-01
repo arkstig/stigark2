@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 export default function Ommeg() {
   return (
     <article className="home ommeg">
@@ -39,8 +41,11 @@ export default function Ommeg() {
         og design for å utvikle. Jeg gleder meg til å jobbe og fordype meg
         videre innen webutvikling og alt som hører til.
       </p>
+      <div className="divOmmeg" />
       <div className="buttonOmmeg">
-        <button type="button">Kontakt meg!</button>
+        <NavLink to="/contact">
+          <button type="button">Kontakt meg!</button>
+        </NavLink>
       </div>
     </article>
   )

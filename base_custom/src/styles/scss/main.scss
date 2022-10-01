@@ -507,7 +507,7 @@ main .kontakt {
 }
 /* HER KOMMER OM MEG SIDEN - EGEN CSS */
 main .ommeg {
-  height: 88vh;
+  height: auto;
   align-self: flex-start;
   padding-bottom: 0px;
   display: flex;
@@ -519,7 +519,11 @@ main .ommeg {
    /* Resize the background image to cover the entire container */
 }
 
-
+.buttonOmmeg {
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+}
 .ommeg p {
   max-width: 60rem;
   background-color: rgba(0, 0, 0, 0.509);
