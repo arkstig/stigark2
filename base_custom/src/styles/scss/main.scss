@@ -355,7 +355,7 @@ button:hover {
 .portfolios article ul {
   background-color: #2d2d2d;
   padding: 5px 10px;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   column-gap: 18px;
@@ -723,17 +723,19 @@ padding-right: 40px;
 }
 
 /*MEDIA QUERIES*/ /*MEDIA QUERIES*/ /*MEDIA QUERIES*/
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1250px) {
   .informasjon {
     padding: 2vw 2vh;
+    
   }
 
   .portfolios article h2 {
     font-size: 2rem;
     margin: 5px 0px;
   }
+
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1050px) {
   main .ommeg {
     height: 100%;
     align-self: flex-end;
