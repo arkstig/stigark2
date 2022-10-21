@@ -187,6 +187,9 @@ const portfolioMain = {
         {
           type: "block",
         },
+        {
+          type: "image",
+        },
       ],
     },
     {

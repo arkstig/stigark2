@@ -3,7 +3,10 @@ import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { useParams, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { PortableText } from '@portabletext/react'
+import { getImageDimensions } from '@sanity/asset-utils'
+import urlBuilder from '@sanity/image-url'
 import { getPortfolio } from '../lib/services/eventService'
+
 import Loading from '../components/Loading'
 
 export default function CurrentPortfolio() {
@@ -25,6 +28,39 @@ export default function CurrentPortfolio() {
       throw new Error(error)
     }
   }, [slug])
+  console.log(portfolio)
+
+  const Image = ({ value, isInline }) => {
+    const { width, height } = getImageDimensions(value)
+    return (
+      <img
+        src={urlBuilder({
+          projectId: 'ejioh35f',
+          dataset: 'production',
+        })
+          .image(value)
+          .width(isInline ? 100 : 800)
+          .fit('max')
+          .auto('format')
+          .url()}
+        alt={value.alt || ' '}
+        loading="lazy"
+        style={{
+          // Display alongside text if image appears inside a block text span
+          display: isInline ? 'inline-block' : 'block',
+
+          // Avoid jumping around with aspect-ratio CSS property
+          aspectRatio: width / height,
+        }}
+      />
+    )
+  }
+
+  const components = {
+    types: {
+      image: Image,
+    },
+  }
   return (
     <div className="container">
       {loading ? (
@@ -64,29 +100,11 @@ export default function CurrentPortfolio() {
           </article>
 
           <article className="casestudy2">
-            <img src={portfolio?.imageUrl1} alt={portfolio?.image1?.caption1} />
             <div>
-              <PortableText value={portfolio?.hovedinnhold} />
-            </div>
-
-            <img alt={portfolio?.image2?.caption2} src={portfolio?.imageUrl2} />
-            <div>
-              <PortableText value={portfolio?.hovedinnhold2} />
-            </div>
-
-            <img alt={portfolio?.image3?.caption3} src={portfolio?.imageUrl3} />
-            <div>
-              <PortableText value={portfolio?.hovedinnhold3} />
-            </div>
-
-            <img alt={portfolio?.image4?.caption4} src={portfolio?.imageUrl4} />
-            <div>
-              <PortableText value={portfolio?.hovedinnhold4} />
-            </div>
-
-            <img alt={portfolio?.image5?.caption5} src={portfolio?.imageUrl5} />
-            <div>
-              <PortableText value={portfolio?.hovedinnhold5} />
+              <PortableText
+                value={portfolio?.hovedinnhold}
+                components={components}
+              />
             </div>
           </article>
         </div>

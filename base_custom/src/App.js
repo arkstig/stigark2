@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ReactSwitch from 'react-switch'
 import { RiSunLine, RiSunFill, RiMoonFill, RiMoonLine } from 'react-icons/ri'
@@ -19,9 +19,9 @@ export default function App() {
   // Write JavaScript, use Hooks, add state and more
   const [theme, setTheme] = useState('dark')
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  }
+  }, [])
 
   return (
     <div id={theme}>

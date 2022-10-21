@@ -12,126 +12,7 @@ const portfolio = {
         hotspot: true, // <-- Defaults to false
       },
     },
-    {
-      title: "Image1",
-      name: "image1",
-      type: "image",
-      options: {
-        hotspot: true, // <-- Defaults to false
-      },
-      fields: [
-        {
-          name: "caption",
-          type: "string",
-          title: "Caption",
-          options: {
-            isHighlighted: true, // <-- make this field easily accessible
-          },
-        },
-        {
-          // Editing this field will be hidden behind an "Edit"-button
-          name: "attribution",
-          type: "string",
-          title: "Attribution",
-        },
-      ],
-    },
-    {
-      title: "Image2",
-      name: "image2",
-      type: "image",
-      options: {
-        hotspot: true, // <-- Defaults to false
-      },
-      fields: [
-        {
-          name: "caption",
-          type: "string",
-          title: "Caption",
-          options: {
-            isHighlighted: true, // <-- make this field easily accessible
-          },
-        },
-        {
-          // Editing this field will be hidden behind an "Edit"-button
-          name: "attribution",
-          type: "string",
-          title: "Attribution",
-        },
-      ],
-    },
-    {
-      title: "Image3",
-      name: "image3",
-      type: "image",
-      options: {
-        hotspot: true, // <-- Defaults to false
-      },
-      fields: [
-        {
-          name: "caption",
-          type: "string",
-          title: "Caption",
-          options: {
-            isHighlighted: true, // <-- make this field easily accessible
-          },
-        },
-        {
-          // Editing this field will be hidden behind an "Edit"-button
-          name: "attribution",
-          type: "string",
-          title: "Attribution",
-        },
-      ],
-    },
-    {
-      title: "Image4",
-      name: "image4",
-      type: "image",
-      options: {
-        hotspot: true, // <-- Defaults to false
-      },
-      fields: [
-        {
-          name: "caption",
-          type: "string",
-          title: "Caption",
-          options: {
-            isHighlighted: true, // <-- make this field easily accessible
-          },
-        },
-        {
-          // Editing this field will be hidden behind an "Edit"-button
-          name: "attribution",
-          type: "string",
-          title: "Attribution",
-        },
-      ],
-    },
-    {
-      title: "Image5",
-      name: "image5",
-      type: "image",
-      options: {
-        hotspot: true, // <-- Defaults to false
-      },
-      fields: [
-        {
-          name: "caption",
-          type: "string",
-          title: "Caption",
-          options: {
-            isHighlighted: true, // <-- make this field easily accessible
-          },
-        },
-        {
-          // Editing this field will be hidden behind an "Edit"-button
-          name: "attribution",
-          type: "string",
-          title: "Attribution",
-        },
-      ],
-    },
+
     {
       title: "Slug",
       name: "slug",
@@ -164,47 +45,12 @@ const portfolio = {
       type: "array",
       of: [
         {
+          title: "Block",
           type: "block",
         },
-      ],
-    },
-    {
-      title: "Richtext1",
-      name: "hovedinnhold2",
-      type: "array",
-      of: [
         {
-          type: "block",
-        },
-      ],
-    },
-    {
-      title: "Richtext2",
-      name: "hovedinnhold3",
-      type: "array",
-      of: [
-        {
-          type: "block",
-        },
-      ],
-    },
-    {
-      title: "Richtext3",
-      name: "hovedinnhold4",
-      type: "array",
-      of: [
-        {
-          type: "block",
-        },
-      ],
-    },
-    {
-      title: "Richtext4",
-      name: "hovedinnhold5",
-      type: "array",
-      of: [
-        {
-          type: "block",
+          title: "Image",
+          type: "image",
         },
       ],
     },
