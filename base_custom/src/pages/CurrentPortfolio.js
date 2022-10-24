@@ -6,6 +6,7 @@ import { PortableText } from '@portabletext/react'
 import { getPortfolio } from '../lib/services/eventService'
 import Loading from '../components/Loading'
 import Image from '../components/Image'
+import Youtube from '../components/youtube'
 
 export default function CurrentPortfolio() {
   const [portfolio, setPortfolio] = useState(null)
@@ -31,8 +32,10 @@ export default function CurrentPortfolio() {
   const components = {
     types: {
       image: Image,
+      youtube: Youtube,
     },
   }
+
   return (
     <div className="container">
       {loading ? (

@@ -52,6 +52,10 @@ const portfolio = {
           title: "Image",
           type: "image",
         },
+        {
+          title: "Youtube",
+          type: "youtube",
+        },
       ],
     },
     {

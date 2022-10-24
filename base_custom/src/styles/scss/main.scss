@@ -54,6 +54,13 @@ h2 {
   color: #ffe26a;
 }
 
+iframe {
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+}
+
+
 /* SWTICH FROM DARK TO LIGHT */
 
 .switch {
@@ -614,9 +621,14 @@ main .ommeg {
 
 .casestudy2 div{
 padding-right: 50px;
-
  margin-bottom: 50px;
  padding-left: 50px;
+ .youTube {
+  padding-right: 0px;
+ margin-bottom: 50px;
+ margin-top: 50px;
+ padding-left: 0px;
+ }
 }
 .casestudy2 a {
   color: #ffe26a;
