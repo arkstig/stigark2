@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import ReactSwitch from 'react-switch'
 import { RiSunLine, RiSunFill, RiMoonFill, RiMoonLine } from 'react-icons/ri'
@@ -17,11 +17,16 @@ import CurrentPortfolioMain from './pages/CurrentPortfolioMain'
 
 export default function App() {
   // Write JavaScript, use Hooks, add state and more
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
 
-  const toggleTheme = useCallback(() => {
+  const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  }, [])
+  }
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+    document.body.className = theme
+  }, [theme])
 
   return (
     <div id={theme}>
